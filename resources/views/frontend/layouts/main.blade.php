@@ -6,206 +6,334 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     @endpush
 
-    @include('frontend.layouts.common.hero')
+    @include('frontend.layouts.common.slider')
 
-    <div class="wrapper row3">
-        <main class="hoc container clear">
-            <!-- main body -->
-            <!-- ################################################################################################ -->
-            <div class="sectiontitle">
-                <h6 class="heading">Donec tortor eget mauris sagittis</h6>
-                <p>Convallis morbi eget leo elit praesent at libero et arcu</p>
-            </div>
-            <div class="group">
-                <div class="one_half first"><img class="inspace-15 borderedbox" src="{{asset('frontend/images/demo/474x356.png')}}" alt=""></div>
-                <div class="one_half">
-                    <ul class="nospace group inspace-15">
-                        <li class="one_half first btmspace-50">
-                            <article>
-                                <h6 class="heading"><a href="#">Pretium commodo</a></h6>
-                                <p class="nospace">Nec ipsum integer in tincidunt ligula ut nec magna ac nisl facilisis ultricies nam sed aliquet nisl aliquam&hellip;</p>
-                            </article>
-                        </li>
-                        <li class="one_half btmspace-50">
-                            <article>
-                                <h6 class="heading"><a href="#">Commodo rhoncus</a></h6>
-                                <p class="nospace">Sapien vitae euismod urna condimentum eu sed sodales leo eget urna fermentum fermentum vivamus auctor&hellip;</p>
-                            </article>
-                        </li>
-                        <li class="one_half first">
-                            <article>
-                                <h6 class="heading"><a href="#">Amet orci facilisis</a></h6>
-                                <p class="nospace">Aliquet phasellus rhoncus imperdiet metus id malesuada curabitur pharetra eu turpis non bibendum suspendisse&hellip;</p>
-                            </article>
-                        </li>
-                        <li class="one_half">
-                            <article>
-                                <h6 class="heading"><a href="#">Aliquam facilisis</a></h6>
-                                <p class="nospace">Iaculis justo in dignissim suspendisse potenti integer eu enim sed felis faucibus ultricies vivamus tellus justo&hellip;</p>
-                            </article>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <!-- ################################################################################################ -->
-            <!-- / main body -->
-            <div class="clear"></div>
-        </main>
-    </div>
-    <!-- ################################################################################################ -->
-    <!-- ################################################################################################ -->
-    <!-- ################################################################################################ -->
-    <div class="wrapper row2">
-        <section class="hoc container clear">
-            <!-- ################################################################################################ -->
-            <div class="sectiontitle">
-                <h6 class="heading">Laoreet vitae faucibus</h6>
-                <p>Mollis nunc curabitur dapibus lacus a eros fermentum et</p>
-            </div>
-            <ul class="nospace group overview services">
-                <li class="one_third">
-                    <article><a href="#"><i class="fa fa-500px"></i></a>
-                        <h6 class="heading"><a href="#">Imperdiet arcu sodales</a></h6>
-                        <p>Curabitur finibus ligula in eleifend semper est enim viverra tellus quis pretium&hellip;</p>
-                        <footer><a href="#">View Details &raquo;</a></footer>
-                    </article>
-                </li>
-                <li class="one_third">
-                    <article><a href="#"><i class="fa fa-angellist"></i></a>
-                        <h6 class="heading"><a href="#">Massa dui eget turpis</a></h6>
-                        <p>Maecenas a nunc rhoncus imperdiet quam vitae vulputate quam curabitur auctor&hellip;</p>
-                        <footer><a href="#">View Details &raquo;</a></footer>
-                    </article>
-                </li>
-                <li class="one_third">
-                    <article><a href="#"><i class="fa fa-bug"></i></a>
-                        <h6 class="heading"><a href="#">Imperdiet lorem congue</a></h6>
-                        <p>Metus tempor viverra class aptent taciti sociosqu ad litora torquent per conubia&hellip;</p>
-                        <footer><a href="#">View Details &raquo;</a></footer>
-                    </article>
-                </li>
-                <li class="one_third">
-                    <article><a href="#"><i class="fa fa-eercast"></i></a>
-                        <h6 class="heading"><a href="#">Nostra inceptos himenaeos</a></h6>
-                        <p>Maecenas dapibus mauris finibus pharetra a cras mi ut pharetra faucibus commodo&hellip;</p>
-                        <footer><a href="#">View Details &raquo;</a></footer>
-                    </article>
-                </li>
-                <li class="one_third">
-                    <article><a href="#"><i class="fa fa-graduation-cap"></i></a>
-                        <h6 class="heading"><a href="#">Donec placerat tincidunt</a></h6>
-                        <p>Volutpat phasellus et imperdiet augue vivamus finibus dolor molestie consequat&hellip;</p>
-                        <footer><a href="#">View Details &raquo;</a></footer>
-                    </article>
-                </li>
-                <li class="one_third">
-                    <article><a href="#"><i class="fa fa-wpexplorer"></i></a>
-                        <h6 class="heading"><a href="#">Ipsum ligula tristique</a></h6>
-                        <p>Tellus in egestas odio velit feugiat neque phasellus non pulvinar quam fringilla&hellip;</p>
-                        <footer><a href="#">View Details &raquo;</a></footer>
-                    </article>
-                </li>
-            </ul>
-            <footer class="center"><a class="btn" href="#">Vestibulum molestie</a></footer>
-            <!-- ################################################################################################ -->
-        </section>
-    </div>
-    <!-- ################################################################################################ -->
-    <!-- ################################################################################################ -->
-    <!-- ################################################################################################ -->
-    <div class="wrapper row3">
-        <figure class="hoc container clear">
-            <!-- ################################################################################################ -->
-            <figcaption class="sectiontitle">
-                <h6 class="heading">Purus vehicula pulvinar</h6>
-                <p>Imperdiet vel duis aliquet urna vel urna molestie sit amet</p>
-            </figcaption>
-            <ul class="nospace group overview">
-                <li class="one_third"><a href="#"><img src="{{asset('frontend/images/demo/320x240.png')}}" alt=""></a></li>
-                <li class="one_third"><a href="#"><img src="{{asset('frontend/images/demo/320x240.png')}}" alt=""></a></li>
-                <li class="one_third"><a href="#"><img src="{{asset('frontend/images/demo/320x240.png')}}" alt=""></a></li>
-                <li class="one_third"><a href="#"><img src="{{asset('frontend/images/demo/320x240.png')}}" alt=""></a></li>
-                <li class="one_third"><a href="#"><img src="{{asset('frontend/images/demo/320x240.png')}}" alt=""></a></li>
-                <li class="one_third"><a href="#"><img src="{{asset('frontend/images/demo/320x240.png')}}" alt=""></a></li>
-            </ul>
-            <!-- ################################################################################################ -->
-        </figure>
-    </div>
-    <!-- ################################################################################################ -->
-    <!-- ################################################################################################ -->
-    <!-- ################################################################################################ -->
-    <div class="wrapper row2">
-        <section class="hoc container clear testimonials">
-            <!-- ################################################################################################ -->
-            <div class="sectiontitle">
-                <h6 class="heading">Dapibus magna viverra</h6>
-                <p>Amet gravida sem sed sit amet risus nisl curabitur mattis</p>
-            </div>
-            <article class="btmspace-80">
-                <blockquote>Id neque nec ornare donec varius turpis vel ante accumsan lacinia aenean aliquet orci lacinia lorem auctor faucibus vel vel ligula aliquam elit ligula rutrum vitae dui at ultricies facilisis ex</blockquote>
-                <figure class="clear"><img src="{{asset('frontend/images/demo/60x60.png')}}" alt="">
-                    <figcaption>
-                        <h6 class="heading">John Doe</h6>
-                        <em>Chairman</em></figcaption>
-                </figure>
-            </article>
-            <footer class="center"><a class="btn" href="#">View More Testimonials &raquo;</a></footer>
-            <!-- ################################################################################################ -->
-        </section>
-    </div>
-    <!-- ################################################################################################ -->
-    <!-- ################################################################################################ -->
-    <!-- ################################################################################################ -->
-    <div class="wrapper row3">
-        <section class="hoc container clear">
-            <!-- ################################################################################################ -->
-            <div class="sectiontitle">
-                <h6 class="heading">Morbi vitae vestibulum</h6>
-                <p>Et orci a nunc ullamcorper lobortis sit amet vel mi etiam</p>
-            </div>
-            <div class="group latest">
-                <article class="one_half first"><a href="#"><img src="{{asset('frontend/images/demo/474x356.png')}}" alt=""></a>
-                    <div class="excerpt">
-                        <h6 class="heading">Arcu leo volutpat a libero</h6>
-                        <p>Nec sodales tincidunt elit sed in vestibulum justo cras sed ipsum quis justo pulvinar hendrerit non nec orci in a quam&hellip;</p>
-                        <div class="clear">
-                            <footer class=" fl_right"><a href="#">Read More</a></footer>
-                            <ul class="nospace meta fl_left">
-                                <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
-                                <li><i class="fa fa-tag"></i> <a href="#">Tag Name</a></li>
+    <section class="section blog-area">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-8 col-md-12">
+                    <div class="blog-posts">
+
+                        <div class="single-post">
+                            <div class="image-wrapper"><img src="{{asset('frontend/images/blog-1-1000x600.jpg')}}" alt="Blog Image"></div>
+
+                            <div class="icons">
+                                <div class="left-area">
+                                    <a class="btn caegory-btn" href="#"><b>TRAVEL</b></a>
+                                </div>
+                                <ul class="right-area social-icons">
+                                    <li><a href="#"><i class="ion-android-share-alt"></i>Share</a></li>
+                                    <li><a href="#"><i class="ion-android-favorite-outline"></i>03</a></li>
+                                    <li><a href="#"><i class="ion-android-textsms"></i>06</a></li>
+                                </ul>
+                            </div>
+                            <p class="date"><em>Monday, October 13, 2017</em></p>
+                            <h3 class="title"><a href="#"><b class="light-color">This is post about travel, adventure and fun</b></a></h3>
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                                laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                                architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
+                                consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et
+                                dolore magnam aliquam quaerat voluptatem.</p>
+                            <a class="btn read-more-btn" href="#"><b>READ MORE</b></a>
+                        </div><!-- single-post -->
+
+                        <div class="single-post">
+                            <div class="image-wrapper"><img src="{{asset('frontend/images/blog-2-1000x600.jpg')}}" alt="Blog Image"></div>
+
+                            <div class="icons">
+                                <div class="left-area">
+                                    <a class="btn caegory-btn" href="#"><b>TRAVEL</b></a>
+                                </div>
+                                <ul class="right-area social-icons">
+                                    <li><a href="#"><i class="ion-android-share-alt"></i>Share</a></li>
+                                    <li><a href="#"><i class="ion-android-favorite-outline"></i>03</a></li>
+                                    <li><a href="#"><i class="ion-android-textsms"></i>06</a></li>
+                                </ul>
+                            </div>
+                            <h6 class="date"><em>Monday, October 13, 2017</em></h6>
+                            <h3 class="title"><a href="#"><b class="light-color">This is post for the ones that love to travel</b></a></h3>
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                                laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                                architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
+                                consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et
+                                dolore magnam aliquam quaerat voluptatem.</p>
+                            <a class="btn read-more-btn" href="#"><b>READ MORE</b></a>
+                        </div><!-- single-post -->
+
+                        <div class="row">
+
+                            <div class="col-lg-6 col-md-12">
+                                <div class="single-post">
+                                    <div class="image-wrapper"><img src="{{asset('frontend/images/blog-3-500x400.jpg')}}" alt="Blog Image"></div>
+
+                                    <div class="icons">
+                                        <div class="left-area">
+                                            <a class="btn caegory-btn" href="#"><b>TRAVEL</b></a>
+                                        </div>
+                                        <ul class="right-area social-icons">
+                                            <li><a href="#"><i class="ion-android-share-alt"></i>Share</a></li>
+                                            <li><a href="#"><i class="ion-android-favorite-outline"></i>03</a></li>
+                                            <li><a href="#"><i class="ion-android-textsms"></i>06</a></li>
+                                        </ul>
+                                    </div>
+                                    <h6 class="date"><em>Monday, October 13, 2017</em></h6>
+                                    <h3 class="title"><a href="#"><b class="light-color">How to paint the wall and street</b></a></h3>
+                                    <p>Sed ut perspiciatis unde omnis iste natus error sit doloremque
+                                        laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi
+                                        dolore magnam aliquam quaerat voluptatem.</p>
+                                    <a class="btn read-more-btn" href="#"><b>READ MORE</b></a>
+                                </div><!-- single-post -->
+                            </div><!-- col-sm-6 -->
+
+                            <div class="col-lg-6 col-md-12">
+                                <div class="single-post">
+                                    <div class="image-wrapper"><img src="{{asset('frontend/images/blog-4-500x400.jpg')}}" alt="Blog Image"></div>
+
+                                    <div class="icons">
+                                        <div class="left-area">
+                                            <a class="btn caegory-btn" href="#"><b>TRAVEL</b></a>
+                                        </div>
+                                        <ul class="right-area social-icons">
+                                            <li><a href="#"><i class="ion-android-share-alt"></i>Share</a></li>
+                                            <li><a href="#"><i class="ion-android-favorite-outline"></i>03</a></li>
+                                            <li><a href="#"><i class="ion-android-textsms"></i>06</a></li>
+                                        </ul>
+                                    </div>
+                                    <h6 class="date"><em>Monday, October 13, 2017</em></h6>
+                                    <h3 class="title"><a href="#"><b class="light-color">One more night in the local clubs</b></a></h3>
+                                    <p>Sed ut perspiciatis unde omnis iste natus error sit doloremque
+                                        laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi
+                                        dolore magnam aliquam quaerat voluptatem.</p>
+                                    <a class="btn read-more-btn" href="#"><b>READ MORE</b></a>
+                                </div><!-- single-post -->
+                            </div><!-- col-sm-6 -->
+
+                            <div class="col-lg-6 col-md-12">
+                                <div class="single-post">
+                                    <div class="image-wrapper"><img src="{{asset('frontend/images/blog-5-500x400.jpg')}}" alt="Blog Image"></div>
+
+                                    <div class="icons">
+                                        <div class="left-area">
+                                            <a class="btn caegory-btn" href="#"><b>TRAVEL</b></a>
+                                        </div>
+                                        <ul class="right-area social-icons">
+                                            <li><a href="#"><i class="ion-android-share-alt"></i>Share</a></li>
+                                            <li><a href="#"><i class="ion-android-favorite-outline"></i>03</a></li>
+                                            <li><a href="#"><i class="ion-android-textsms"></i>06</a></li>
+                                        </ul>
+                                    </div>
+                                    <h6 class="date"><em>Monday, October 13, 2017</em></h6>
+                                    <h3 class="title"><a href="#"><b class="light-color">A new festival in your town</b></a></h3>
+                                    <p>Sed ut perspiciatis unde omnis iste natus error sit doloremque
+                                        laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi
+                                        dolore magnam aliquam quaerat voluptatem.</p>
+                                    <a class="btn read-more-btn" href="#"><b>READ MORE</b></a>
+                                </div><!-- single-post -->
+                            </div><!-- col-sm-6 -->
+
+                            <div class="col-lg-6 col-md-12">
+                                <div class="single-post">
+                                    <div class="image-wrapper"><img src="{{asset('frontend/images/blog-6-500x400.jpg')}}" alt="Blog Image"></div>
+
+                                    <div class="icons">
+                                        <div class="left-area">
+                                            <a class="btn caegory-btn" href="#"><b>TRAVEL</b></a>
+                                        </div>
+                                        <ul class="right-area social-icons">
+                                            <li><a href="#"><i class="ion-android-share-alt"></i>Share</a></li>
+                                            <li><a href="#"><i class="ion-android-favorite-outline"></i>03</a></li>
+                                            <li><a href="#"><i class="ion-android-textsms"></i>06</a></li>
+                                        </ul>
+                                    </div>
+                                    <h6 class="date"><em>Monday, October 13, 2017</em></h6>
+                                    <h3 class="title"><a href="#"><b class="light-color">How to make your home modern</b></a></h3>
+                                    <p>Sed ut perspiciatis unde omnis iste natus error sit doloremque
+                                        laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi
+                                        dolore magnam aliquam quaerat voluptatem.</p>
+                                    <a class="btn read-more-btn" href="#"><b>READ MORE</b></a>
+                                </div><!-- single-post -->
+                            </div><!-- col-sm-6 -->
+
+                            <div class="col-lg-12 col-md-12">
+                                <div class="single-post post-style-2">
+                                    <div class="image-wrapper width-50 left-area">
+                                        <img src="{{asset('frontend/images/blog-7-500x400.jpg')}}" alt="Blog Image"></div>
+
+                                    <div class="post-details width-50 right-area">
+
+                                        <div class="icons">
+                                            <div class="left-area">
+                                                <a class="btn caegory-btn" href="#"><b>TRAVEL</b></a>
+                                            </div>
+                                            <ul class="right-area social-icons">
+                                                <li><a href="#"><i class="ion-android-share-alt"></i>Share</a></li>
+                                                <li><a href="#"><i class="ion-android-favorite-outline"></i>03</a></li>
+                                                <li><a href="#"><i class="ion-android-textsms"></i>06</a></li>
+                                            </ul>
+                                        </div>
+                                        <h6 class="date"><em>Monday, October 13, 2017</em></h6>
+                                        <h3 class="title"><a href="#"><b class="light-color">How to througn the best engagement party</b></a></h3>
+                                        <p>Sed ut perspiciatis unde omnis iste natus error sit doloremque
+                                            laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi
+                                            dolore magnam aliquam quaerat voluptatem.</p>
+                                        <a class="btn read-more-btn" href="#"><b>READ MORE</b></a>
+                                    </div><!-- post-details -->
+
+                                </div><!-- single-post -->
+                            </div><!-- col-sm-6 -->
+
+                        </div><!-- row -->
+
+                        <a class="btn load-more-btn" target="_blank" href="#">LOAD OLDER POSTS</a>
+
+                    </div><!-- blog-posts -->
+                </div><!-- col-lg-4 -->
+
+
+                <div class="col-lg-4 col-md-12">
+                    <div class="sidebar-area">
+
+                        <div class="sidebar-section about-author center-text">
+                            <div class="author-image"><img src="{{asset('frontend/images/author-1-200x200.jpg')}}" alt="Autohr Image"></div>
+
+                            <ul class="social-icons">
+                                <li><a href="#"><i class="ion-social-facebook-outline"></i></a></li>
+                                <li><a href="#"><i class="ion-social-twitter-outline"></i></a></li>
+                                <li><a href="#"><i class="ion-social-instagram-outline"></i></a></li>
+                                <li><a href="#"><i class="ion-social-vimeo-outline"></i></a></li>
+                                <li><a href="#"><i class="ion-social-pinterest-outline"></i></a></li>
+                            </ul><!-- right-area -->
+
+                            <h4 class="author-name"><b class="light-color">Cristine Smith</b></h4>
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                                dolore magnam aliquam quaerat voluptatem.</p>
+
+                            <div class="signature-image"><img src="{{asset('frontend/images/signature-image.png')}}" alt="Signature Image"></div>
+                            <a class="read-more-link" href="#"><b>READ MORE</b></a>
+
+                        </div><!-- sidebar-section about-author -->
+
+                        <div class="sidebar-section src-area">
+
+                            <form action="post">
+                                <input class="src-input" type="text" placeholder="Search">
+                                <button class="src-btn" type="submit"><i class="ion-ios-search-strong"></i></button>
+                            </form>
+
+                        </div><!-- sidebar-section src-area -->
+
+                        <div class="sidebar-section newsletter-area">
+                            <h5 class="title"><b>Subscribe to our newsletter</b></h5>
+                            <form action="post">
+                                <input class="email-input" type="text" placeholder="Your email here">
+                                <button class="btn btn-2" type="submit">SUBSCRIBE</button>
+                            </form>
+                        </div><!-- sidebar-section newsletter-area -->
+
+                        <div class="sidebar-section category-area">
+                            <h4 class="title"><b class="light-color">Categories</b></h4>
+                            <a class="category" href="#">
+                                <img src="{{asset('frontend/images/category-1-400x150.jpg')}}" alt="Category Image">
+                                <h6 class="name">TRAVEL</h6>
+                            </a>
+
+                            <a class="category" href="#">
+                                <img src="{{asset('frontend/images/category-2-400x150.jpg')}}" alt="Category Image">
+                                <h6 class="name">FASHION</h6>
+                            </a>
+
+                            <a class="category" href="#">
+                                <img src="{{asset('frontend/images/category-3-400x150.jpg')}}" alt="Category Image">
+                                <h6 class="name">LIFESTYLE</h6>
+                            </a>
+                            <a class="category" href="#">
+                                <img src="{{asset('frontend/images/category-4-400x150.jpg')}}" alt="Category Image">
+                                <h6 class="name">DESIGN</h6>
+                            </a>
+                        </div><!-- sidebar-section category-area -->
+
+                        <div class="sidebar-section latest-post-area">
+                            <h4 class="title"><b class="light-color">Latest Posts</b></h4>
+
+                            <div class="latest-post" href="#">
+                                <div class="l-post-image"><img src="{{asset('frontend/images/recent-post-1-150x200.jpg')}}" alt="Category Image"></div>
+                                <div class="post-info">
+                                    <a class="btn category-btn" href="#">TRAVEL</a>
+                                    <h5><a href="#"><b class="light-color">One more night in the clubs</b></a></h5>
+                                    <h6 class="date"><em>Monday, October 13, 2017</em></h6>
+                                </div>
+                            </div>
+
+                            <div class="latest-post" href="#">
+                                <div class="l-post-image"><img src="{{asset('frontend/images/recent-post-2-150x200.jpg')}}" alt="Category Image"></div>
+                                <div class="post-info">
+                                    <a class="btn category-btn" href="#">TRAVEL</a>
+                                    <h5><a href="#"><b class="light-color">Travel lights in winter</b></a></h5>
+                                    <h6 class="date"><em>Monday, October 13, 2017</em></h6>
+                                </div>
+                            </div>
+                            <div class="latest-post" href="#">
+                                <div class="l-post-image"><img src="{{asset('frontend/images/recent-post-3-150x200.jpg')}}" alt="Category Image"></div>
+                                <div class="post-info">
+                                    <a class="btn category-btn" href="#">TRAVEL</a>
+                                    <h5><a href="#"><b class="light-color">How to travel with no money</b></a></h5>
+                                    <h6 class="date"><em>Monday, October 13, 2017</em></h6>
+                                </div>
+                            </div>
+
+                            <div class="latest-post" href="#">
+                                <div class="l-post-image"><img src="{{asset('frontend/images/recent-post-4-150x200.jpg')}}" alt="Category Image"></div>
+                                <div class="post-info">
+                                    <a class="btn category-btn" href="#">TRAVEL</a>
+                                    <h5><a href="#"><b class="light-color">Smile 10 times a day</b></a></h5>
+                                    <h6 class="date"><em>Monday, October 13, 2017</em></h6>
+                                </div>
+                            </div>
+
+                        </div><!-- sidebar-section latest-post-area -->
+
+                        <div class="sidebar-section advertisement-area">
+                            <h4 class="title"><b class="light-color">Advertisement</b></h4>
+                            <a class="advertisement-img" href="#">
+                                <img src="{{asset('frontend/images/advertise-1-400x500.jpg')}}" alt="Advertisement Image">
+                                <h6 class="btn btn-2 discover-btn">DISCOVER</h6>
+                            </a>
+                        </div><!-- sidebar-section advertisement-area -->
+
+                        <div class="sidebar-section instagram-area">
+                            <h4 class="title"><b class="light-color">Instagram</b></h4>
+                            <ul class="instagram-img">
+                                <li><a href="#"><img src="{{asset('frontend/images/instragram-side-1-150x150.jpg')}}" alt="Instagram Image"></a></li>
+                                <li><a href="#"><img src="{{asset('frontend/images/instragram-side-2-150x150.jpg')}}" alt="Instagram Image"></a></li>
+                                <li><a href="#"><img src="{{asset('frontend/images/instragram-side-3-150x150.jpg')}}" alt="Instagram Image"></a></li>
+                                <div class="clearfix"></div>
+                                <li><a href="#"><img src="{{asset('frontend/images/instragram-side-4-150x150.jpg')}}" alt="Instagram Image"></a></li>
+                                <li><a href="#"><img src="{{asset('frontend/images/instragram-side-5-150x150.jpg')}}" alt="Instagram Image"></a></li>
+                                <li><a href="#"><img src="{{asset('frontend/images/instragram-side-6-150x150.jpg')}}" alt="Instagram Image"></a></li>
                             </ul>
-                        </div>
-                    </div>
-                </article>
-                <article class="one_half"><a href="#"><img src="{{asset('frontend/images/demo/474x356.png')}}" alt=""></a>
-                    <div class="excerpt">
-                        <h6 class="heading">Varius blandit purus</h6>
-                        <p>Sed ultrices velit etiam eleifend nulla vestibulum dapibus ex nec luctus est donec lectus lacus varius vitae ut viverra&hellip;</p>
-                        <div class="clear">
-                            <footer class=" fl_right"><a href="#">Read More</a></footer>
-                            <ul class="nospace meta fl_left">
-                                <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
-                                <li><i class="fa fa-tag"></i> <a href="#">Tag Name</a></li>
+                        </div><!-- sidebar-section instagram-area -->
+
+                        <div class="sidebar-section tags-area">
+                            <h4 class="title"><b class="light-color">Tags</b></h4>
+                            <ul class="tags">
+                                <li><a class="btn" href="#">design</a></li>
+                                <li><a class="btn" href="#">fasinon</a></li>
+                                <li><a class="btn" href="#">travel</a></li>
+                                <li><a class="btn" href="#">music</a></li>
+                                <li><a class="btn" href="#">video</a></li>
+                                <li><a class="btn" href="#">photography</a></li>
+                                <li><a class="btn" href="#">adventure</a></li>
                             </ul>
-                        </div>
-                    </div>
-                </article>
-            </div>
-            <footer class="center"><a class="btn" href="#">View More Posts &raquo;</a></footer>
-            <!-- ################################################################################################ -->
-        </section>
-    </div>
-    <!-- ################################################################################################ -->
-    <!-- ################################################################################################ -->
-    <!-- ################################################################################################ -->
-    <div class="wrapper coloured">
-        <article class="hoc cta clear">
-            <!-- ################################################################################################ -->
-            <h6 class="three_quarter first">Nec eros maecenas sed ligula enim proin fermentum</h6>
-            <footer class="one_quarter"><a class="btn" href="#">Viverra vehicula &raquo;</a></footer>
-            <!-- ################################################################################################ -->
-        </article>
-    </div>
+                        </div><!-- sidebar-section tags-area -->
+
+
+                    </div><!-- about-author -->
+                </div><!-- col-lg-4 -->
+
+            </div><!-- row -->
+        </div><!-- container -->
+    </section><!-- section -->
 
 
 

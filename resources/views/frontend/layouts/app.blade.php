@@ -1,24 +1,31 @@
-<!DOCTYPE html>
-
-<html lang="">
+<!DOCTYPE HTML>
+<html lang="en">
 @include('frontend.layouts.common.head')
-<body id="top">
+@stack('style')
+<body>
 
 
 @include('frontend.layouts.common.header')
 
-
-
 @yield('content')
 
+@include('frontend.layouts.common.footer')
 
-@include('frontend.layouts.common.footer1')
-@include('frontend.layouts.common.footer2')
 
-<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
-<!-- JAVASCRIPTS -->
-<script src="{{asset('frontend/layout/scripts/jquery.min.js')}}"></script>
-<script src="{{asset('frontend/layout/scripts/jquery.backtotop.js')}}"></script>
-<script src="{{asset('frontend/layout/scripts/jquery.mobilemenu.js')}}"></script>
+<!-- SCIPTS -->
+
+<script src="{{asset('frontend/common-js/jquery-3.1.1.min.js')}}"></script>
+
+<script src="{{asset('frontend/common-js/tether.min.js')}}"></script>
+
+<script src="{{asset('frontend/common-js/bootstrap.js')}}"></script>
+
+<script src="{{asset('frontend/common-js/layerslider.js')}}"></script>
+
+<script src="{{asset('frontend/common-js/scripts.js')}}"></script>
+
+
+@stack('scripts')
+
 </body>
 </html>

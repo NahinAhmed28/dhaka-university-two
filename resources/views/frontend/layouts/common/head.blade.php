@@ -1,9 +1,29 @@
 <head>
-        <title>icgs.bd</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <link href="{{asset('frontend/layout/styles/layout.css')}}" rel="stylesheet" type="text/css" media="all">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css">
+    <title>ICGS.BD</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+
+
+    <!-- Font -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+    <!-- Stylesheets -->
+
+    <link href="{{asset('frontend/common-css/bootstrap.css')}}" rel="stylesheet">
+
+    <link href="{{asset('frontend/common-css/ionicons.css')}}" rel="stylesheet">
+
+    <link href="{{asset('frontend/common-css/layerslider.css')}}" rel="stylesheet">
+
+
+    <link href="{{asset('frontend/01-homepage/css/styles.css')}}" rel="stylesheet">
+
+    <link href="{{asset('frontend/01-homepage/css/responsive.css')}}" rel="stylesheet">
+
+
+
 
 </head>
