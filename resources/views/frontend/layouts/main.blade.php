@@ -1,402 +1,388 @@
-@extends('frontend.layouts.app')
-
-@section('content')
-
-@push('style')
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-@endpush
-
-<!-- ======= Hero Section ======= -->
-@include('frontend.layouts.common.hero')
-<!-- End Hero -->
-
-<!-- Start #main -->
-<main id="main">
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-        <div class="container" data-aos="fade-up">
-
-            <div class="row">
-
-                <div class="col-lg-6 video-box align-self-baseline" data-aos="zoom-in" data-aos-delay="100">
-
-                    <iframe style="width: 100%; min-height: 300px"  src="https://www.youtube.com/embed/{{getOwnYoutubeIdForEmbed($about->video)}}"
-{{--                            style="height:700px;width:1280px;"--}}
-                            title="YouTube video player" allowfullscreen></iframe>
-{{--                    <img src="{{ asset('frontend/assets/img/about.jpg') }}" class="img-fluid" alt="">--}}
-{{--                    <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox play-btn mb-4"></a>--}}
-                </div>
-
-                <div class="col-lg-6 pt-3 pt-lg-0 content">
-                    <h3>About Us</h3>
-                    <p class="fst-italic">
-                        {!!$about->description!!}
-                    </p>
-                </div>
-
+<!DOCTYPE html>
+<!--
+Template Name: Nalpure
+Author: <a href="https://www.os-templates.com/">OS Templates</a>
+Author URI: https://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: https://www.os-templates.com/template-terms
+-->
+<html lang="">
+<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
+<head>
+    <title>Nalpure</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="{{asset('frontend/layout/styles/layout.css')}}" rel="stylesheet" type="text/css" media="all">
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row0">
+    <div id="topbar" class="hoc clear">
+        <!-- ################################################################################################ -->
+        <ul class="nospace">
+            <li><i class="fa fa-envelope-o"></i> info@domain.com</li>
+            <li><a href="#"><i class="fa fa-lg fa-home"></i></a></li>
+            <li><a href="#" title="Help Centre"><i class="fa fa-life-bouy"></i></a></li>
+            <li><a href="#" title="Login"><i class="fa fa-lg fa-sign-in"></i></a></li>
+            <li><a href="#" title="Sign Up"><i class="fa fa-lg fa-edit"></i></a></li>
+        </ul>
+        <!-- ################################################################################################ -->
+    </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row1">
+    <header id="header" class="hoc clear">
+        <section>
+            <!-- ################################################################################################ -->
+            <div><i class="fa fa-phone"></i> +00 (123) 456 7890</div>
+            <div>
+                <h1 id="logo"><a href="#">Nalpure</a></h1>
             </div>
-
-        </div>
-    </section><!-- End About Section -->
-
-    <!-- ======= About Boxes Section ======= -->
-    <section id="about-boxes" class="about-boxes">
-        <div class="container" data-aos="fade-up">
-
-            <div class="row">
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card">
-                        <img src="{{ asset('assets/uploads/mission/'.$mission->image)}}" class="card-img-top" alt="...">
-                        <div class="card-icon">
-                            <i class="ri-brush-4-line"></i>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title"><a href="">Our Mission</a></h5>
-                            <p class="card-text">{!!$mission->description!!}</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card">
-                        <img src="{{ asset('assets/uploads/plan/'.$plan->image)}}" class="card-img-top" alt="...">
-                        <div class="card-icon">
-                            <i class="ri-calendar-check-line"></i>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title"><a href="">Our Plan</a></h5>
-                            <p class="card-text">{!!$plan->description!!}</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card">
-                        <img src="{{ asset('assets/uploads/vision/'.$vision->image)}}" class="card-img-top" alt="...">
-                        <div class="card-icon">
-                            <i class="ri-movie-2-line"></i>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title"><a href="">Our Vision</a></h5>
-                            <p class="card-text">{!!$vision->description!!}</p>
-                        </div>
-                    </div>
-                </div>
+            <div>
+                <form class="clear" method="post" action="#">
+                    <fieldset>
+                        <legend>Search:</legend>
+                        <input type="search" value="" placeholder="Search Here&hellip;">
+                        <button class="fa fa-search" type="submit" title="Search"><em>Search</em></button>
+                    </fieldset>
+                </form>
             </div>
-
-        </div>
-    </section><!-- End About Boxes Section -->
-
-    <!-- ======= Clients Section ======= -->
-    <section id="organization" class="clients">
-        <div class="container" data-aos="zoom-in">
-            <div class="section-title">
-                <h2>Partners</h2>
-            </div>
-            <div class="row">
-
-                @foreach($organizations as $organization)
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <img src="{{ asset('assets/uploads/organization/'.$organization->image)}}" class="img-fluid" alt="">
-                </div>
-                @endforeach
-
-            </div>
-
-        </div>
-    </section><!-- End Clients Section -->
-
-    <!-- ======= Features Section ======= -->
-    <section id="features" class="features">
-        <div class="container" data-aos="fade-up">
-            <div class="section-title">
-                <h2>Expertises</h2>
-            </div>
-            <ul class="nav nav-tabs row d-flex ">
-                @foreach ($expertises as $expertise)
-                    <li class="nav-item col-3 pt-3">
-                        <a class="nav-link show {{($loop->index+1 == 1)?'active':''}}" data-bs-toggle="tab"
-                           href={{"#tab-".$loop->index+1}}>
-                            <i class="ri-gps-line"></i>
-                            <h4 class="d-none d-lg-block">{{ $expertise->title }}</h4>
-                        </a>
-                    </li>
-                @endforeach
+            <!-- ################################################################################################ -->
+        </section>
+        <nav id="mainav">
+            <!-- ################################################################################################ -->
+            <ul class="clear">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a class="drop" href="#">Pages</a>
+                    <ul>
+                        <li><a href="{{asset('frontend/pages/gallery.html')}}">Gallery</a></li>
+                        <li><a href="{{asset('frontend/pages/full-width.html')}}">Full Width</a></li>
+                        <li><a href="{{asset('frontend/pages/sidebar-left.html')}}">Sidebar Left</a></li>
+                        <li><a href="{{asset('frontend/pages/sidebar-right.html')}}">Sidebar Right</a></li>
+                        <li><a href="{{asset('frontend/pages/basic-grid.html')}}">Basic Grid</a></li>
+                    </ul>
+                </li>
+                <li><a class="drop" href="#">Dropdown</a>
+                    <ul>
+                        <li><a href="#">Level 2</a></li>
+                        <li><a class="drop" href="#">Level 2 + Drop</a>
+                            <ul>
+                                <li><a href="#">Level 3</a></li>
+                                <li><a href="#">Level 3</a></li>
+                                <li><a href="#">Level 3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Level 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Link Text</a></li>
+                <li><a href="#">Link Text</a></li>
+                <li><a href="#">Link Text</a></li>
+                <li><a href="#">Long Link Text</a></li>
             </ul>
-
-            <div class="tab-content">
-                @foreach ($expertises as $expertise)
-                    <div class="tab-pane show {{($loop->index+1 == 1)?'active':''}}" id={{"tab-".$loop->index+1}}>
-                        <div class="row">
-                            <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                                {!!$expertise->description!!}
-                                {{-- <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
-                                <p class="fst-italic">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore
-                                    magna aliqua.
-                                </p>
-                                <ul>
-                                    <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo
-                                        consequat.</li>
-                                    <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in
-                                        voluptate velit.</li>
-                                    <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo
-                                        consequat. Duis aute irure dolor in reprehenderit in voluptate trideta
-                                        storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-                                </ul>
-                                <p>
-                                    Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                    reprehenderit in voluptate
-                                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                    proident, sunt in
-                                    culpa qui officia deserunt mollit anim id est laborum
-                                </p> --}}
-                            </div>
-                            <div class="col-lg-6 order-1 order-lg-2 text-center">
-                                <img src="{{ asset('assets/uploads/expertise/'.$expertise->image)}}" class="img-fluid"
-                                     alt="">
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-
+            <!-- ################################################################################################ -->
+        </nav>
+    </header>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="bgded" style="background-image:url('images/demo/backgrounds/01.png');">
+    <div id="pageintro" class="hoc clear">
+        <!-- ################################################################################################ -->
+        <article>
+            <h3 class="heading">Vestibulum vehicula egestas</h3>
+            <p>Rhoncus a odio fusce eu lorem vehicula euismod mauris eget sodales mi duis habitant morbi tristique senectus et netus et malesuada fames.</p>
+            <footer><a class="btn" href="#">Turpis egestas</a></footer>
+        </article>
+        <!-- ################################################################################################ -->
+    </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+    <main class="hoc container clear">
+        <!-- main body -->
+        <!-- ################################################################################################ -->
+        <div class="sectiontitle">
+            <h6 class="heading">Donec tortor eget mauris sagittis</h6>
+            <p>Convallis morbi eget leo elit praesent at libero et arcu</p>
         </div>
-    </section><!-- End Features Section -->
-
-
-    <!-- ======= About Boxes Section ======= -->
-    <section id="about-boxes" class="about-boxes">
-        <div class="container" data-aos="fade-up">
-            <div class="section-title">
-                <h2>Our</h2>
-                <p>Services</p>
+        <div class="group">
+            <div class="one_half first"><img class="inspace-15 borderedbox" src="{{asset('frontend/images/demo/474x356.png')}}" alt=""></div>
+            <div class="one_half">
+                <ul class="nospace group inspace-15">
+                    <li class="one_half first btmspace-50">
+                        <article>
+                            <h6 class="heading"><a href="#">Pretium commodo</a></h6>
+                            <p class="nospace">Nec ipsum integer in tincidunt ligula ut nec magna ac nisl facilisis ultricies nam sed aliquet nisl aliquam&hellip;</p>
+                        </article>
+                    </li>
+                    <li class="one_half btmspace-50">
+                        <article>
+                            <h6 class="heading"><a href="#">Commodo rhoncus</a></h6>
+                            <p class="nospace">Sapien vitae euismod urna condimentum eu sed sodales leo eget urna fermentum fermentum vivamus auctor&hellip;</p>
+                        </article>
+                    </li>
+                    <li class="one_half first">
+                        <article>
+                            <h6 class="heading"><a href="#">Amet orci facilisis</a></h6>
+                            <p class="nospace">Aliquet phasellus rhoncus imperdiet metus id malesuada curabitur pharetra eu turpis non bibendum suspendisse&hellip;</p>
+                        </article>
+                    </li>
+                    <li class="one_half">
+                        <article>
+                            <h6 class="heading"><a href="#">Aliquam facilisis</a></h6>
+                            <p class="nospace">Iaculis justo in dignissim suspendisse potenti integer eu enim sed felis faucibus ultricies vivamus tellus justo&hellip;</p>
+                        </article>
+                    </li>
+                </ul>
             </div>
-            <div class="row">
-                @foreach ($services as $service)
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                        <div class="card">
-                            <img src="{{ asset('assets/uploads/service/'.$service->image)}}" class="card-img-top"
-                                 alt="...">
-                            <div class="card-icon">
-                                <i class="ri-brush-4-line"></i>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title"><a href="">{!!$service->title!!}</a></h5>
-                                <p class="card-text">{!!$service->description!!}</p>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-
         </div>
-    </section><!-- End About Boxes Section -->
-
-    <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials">
-        <div class="container" data-aos="zoom-in">
-
-            <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                <div class="swiper-wrapper">
-
-                    @foreach ($members as $member)
-                    <div class="swiper-slide">
-                        <div class="testimonial-item">
-                            <img src="{{ asset('assets/uploads/member/'. $member->image) }}" class="testimonial-img"
-                                alt="">
-                            <h3>{{$member->name}}</h3>
-                            <h4>{{$member->designation}}</h4>
-                            <p>
-                                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                {{$member->message}}
-                                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                            </p>
-                        </div>
-                    </div><!-- End testimonial item -->
-                    @endforeach
-
+        <!-- ################################################################################################ -->
+        <!-- / main body -->
+        <div class="clear"></div>
+    </main>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row2">
+    <section class="hoc container clear">
+        <!-- ################################################################################################ -->
+        <div class="sectiontitle">
+            <h6 class="heading">Laoreet vitae faucibus</h6>
+            <p>Mollis nunc curabitur dapibus lacus a eros fermentum et</p>
+        </div>
+        <ul class="nospace group overview services">
+            <li class="one_third">
+                <article><a href="#"><i class="fa fa-500px"></i></a>
+                    <h6 class="heading"><a href="#">Imperdiet arcu sodales</a></h6>
+                    <p>Curabitur finibus ligula in eleifend semper est enim viverra tellus quis pretium&hellip;</p>
+                    <footer><a href="#">View Details &raquo;</a></footer>
+                </article>
+            </li>
+            <li class="one_third">
+                <article><a href="#"><i class="fa fa-angellist"></i></a>
+                    <h6 class="heading"><a href="#">Massa dui eget turpis</a></h6>
+                    <p>Maecenas a nunc rhoncus imperdiet quam vitae vulputate quam curabitur auctor&hellip;</p>
+                    <footer><a href="#">View Details &raquo;</a></footer>
+                </article>
+            </li>
+            <li class="one_third">
+                <article><a href="#"><i class="fa fa-bug"></i></a>
+                    <h6 class="heading"><a href="#">Imperdiet lorem congue</a></h6>
+                    <p>Metus tempor viverra class aptent taciti sociosqu ad litora torquent per conubia&hellip;</p>
+                    <footer><a href="#">View Details &raquo;</a></footer>
+                </article>
+            </li>
+            <li class="one_third">
+                <article><a href="#"><i class="fa fa-eercast"></i></a>
+                    <h6 class="heading"><a href="#">Nostra inceptos himenaeos</a></h6>
+                    <p>Maecenas dapibus mauris finibus pharetra a cras mi ut pharetra faucibus commodo&hellip;</p>
+                    <footer><a href="#">View Details &raquo;</a></footer>
+                </article>
+            </li>
+            <li class="one_third">
+                <article><a href="#"><i class="fa fa-graduation-cap"></i></a>
+                    <h6 class="heading"><a href="#">Donec placerat tincidunt</a></h6>
+                    <p>Volutpat phasellus et imperdiet augue vivamus finibus dolor molestie consequat&hellip;</p>
+                    <footer><a href="#">View Details &raquo;</a></footer>
+                </article>
+            </li>
+            <li class="one_third">
+                <article><a href="#"><i class="fa fa-wpexplorer"></i></a>
+                    <h6 class="heading"><a href="#">Ipsum ligula tristique</a></h6>
+                    <p>Tellus in egestas odio velit feugiat neque phasellus non pulvinar quam fringilla&hellip;</p>
+                    <footer><a href="#">View Details &raquo;</a></footer>
+                </article>
+            </li>
+        </ul>
+        <footer class="center"><a class="btn" href="#">Vestibulum molestie</a></footer>
+        <!-- ################################################################################################ -->
+    </section>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+    <figure class="hoc container clear">
+        <!-- ################################################################################################ -->
+        <figcaption class="sectiontitle">
+            <h6 class="heading">Purus vehicula pulvinar</h6>
+            <p>Imperdiet vel duis aliquet urna vel urna molestie sit amet</p>
+        </figcaption>
+        <ul class="nospace group overview">
+            <li class="one_third"><a href="#"><img src="{{asset('frontend/images/demo/320x240.png')}}" alt=""></a></li>
+            <li class="one_third"><a href="#"><img src="{{asset('frontend/images/demo/320x240.png')}}" alt=""></a></li>
+            <li class="one_third"><a href="#"><img src="{{asset('frontend/images/demo/320x240.png')}}" alt=""></a></li>
+            <li class="one_third"><a href="#"><img src="{{asset('frontend/images/demo/320x240.png')}}" alt=""></a></li>
+            <li class="one_third"><a href="#"><img src="{{asset('frontend/images/demo/320x240.png')}}" alt=""></a></li>
+            <li class="one_third"><a href="#"><img src="{{asset('frontend/images/demo/320x240.png')}}" alt=""></a></li>
+        </ul>
+        <!-- ################################################################################################ -->
+    </figure>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row2">
+    <section class="hoc container clear testimonials">
+        <!-- ################################################################################################ -->
+        <div class="sectiontitle">
+            <h6 class="heading">Dapibus magna viverra</h6>
+            <p>Amet gravida sem sed sit amet risus nisl curabitur mattis</p>
+        </div>
+        <article class="btmspace-80">
+            <blockquote>Id neque nec ornare donec varius turpis vel ante accumsan lacinia aenean aliquet orci lacinia lorem auctor faucibus vel vel ligula aliquam elit ligula rutrum vitae dui at ultricies facilisis ex</blockquote>
+            <figure class="clear"><img src="{{asset('frontend/images/demo/60x60.png')}}" alt="">
+                <figcaption>
+                    <h6 class="heading">John Doe</h6>
+                    <em>Chairman</em></figcaption>
+            </figure>
+        </article>
+        <footer class="center"><a class="btn" href="#">View More Testimonials &raquo;</a></footer>
+        <!-- ################################################################################################ -->
+    </section>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+    <section class="hoc container clear">
+        <!-- ################################################################################################ -->
+        <div class="sectiontitle">
+            <h6 class="heading">Morbi vitae vestibulum</h6>
+            <p>Et orci a nunc ullamcorper lobortis sit amet vel mi etiam</p>
+        </div>
+        <div class="group latest">
+            <article class="one_half first"><a href="#"><img src="{{asset('frontend/images/demo/474x356.png')}}" alt=""></a>
+                <div class="excerpt">
+                    <h6 class="heading">Arcu leo volutpat a libero</h6>
+                    <p>Nec sodales tincidunt elit sed in vestibulum justo cras sed ipsum quis justo pulvinar hendrerit non nec orci in a quam&hellip;</p>
+                    <div class="clear">
+                        <footer class=" fl_right"><a href="#">Read More</a></footer>
+                        <ul class="nospace meta fl_left">
+                            <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
+                            <li><i class="fa fa-tag"></i> <a href="#">Tag Name</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="swiper-pagination"></div>
-            </div>
-
-        </div>
-    </section><!-- End Testimonials Section -->
-
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
-        <div class="container" data-aos="fade-up">
-
-            <div class="section-title">
-                <h2>Portfolio</h2>
-                <p>Check our Portfolio</p>
-            </div>
-
-            <div class="row" data-aos="fade-up" data-aos-delay="100">
-                {{--                    <div class="col-lg-12 d-flex justify-content-center">--}}
-                {{--                        <ul id="portfolio-flters">--}}
-                {{--                            <li data-filter="*" class="filter-active">All</li>--}}
-                {{--                            <li data-filter=".filter-app">App</li>--}}
-                {{--                            <li data-filter=".filter-card">Card</li>--}}
-                {{--                            <li data-filter=".filter-web">Web</li>--}}
-                {{--                        </ul>--}}
-                {{--                    </div>--}}
-            </div>
-
-            <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-                @foreach($galleries as $gallery)
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <img src="{{ asset('assets/uploads/gallery/'.$gallery->image)}}" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <h4>{{$gallery->category}}</h4>
-                            <a href="{{ asset('assets/uploads/gallery/'.$gallery->image) }}"
-                               data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="{{$gallery->category}}"><i
-                                    class="bx bx-zoom-in"></i></a>
-                            {{--                            <a href="portfolio-details.html" class="details-link" title="More Details"><i--}}
-                            {{--                                    class="bx bx-link"></i></a>--}}
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-
-        </div>
-    </section><!-- End Portfolio Section -->
-
-    <!-- ======= Team Section ======= -->
-    <section id="team" class="team section-bg">
-        <div class="container" data-aos="fade-up">
-
-            <div class="section-title">
-                <h2>Team</h2>
-                <p>Check our Team</p>
-            </div>
-
-            <div class="row">
-
-                @foreach ($members as $member)
-                <div class="col-lg-4 col-md-6">
-                    <div class="member" data-aos="fade-up" data-aos-delay="100">
-                        <div class="pic"><img src="{{ asset('assets/uploads/member/'. $member->image) }}"
-                                class="img-fluid" alt=""></div>
-                        <div class="member-info">
-                            <h4>{{$member->name}}</h4>
-                            <span>{{$member->designation}}</span>
-                            <div class="social">
-{{--                                <a href=""><i class="bi bi-twitter"></i></a>--}}
-{{--                                <a href=""><i class="bi bi-facebook"></i></a>--}}
-{{--                                <a href=""><i class="bi bi-instagram"></i></a>--}}
-{{--                                <a href=""><i class="bi bi-linkedin"></i></a>--}}
-                            </div>
-                        </div>
+            </article>
+            <article class="one_half"><a href="#"><img src="{{asset('frontend/images/demo/474x356.png')}}" alt=""></a>
+                <div class="excerpt">
+                    <h6 class="heading">Varius blandit purus</h6>
+                    <p>Sed ultrices velit etiam eleifend nulla vestibulum dapibus ex nec luctus est donec lectus lacus varius vitae ut viverra&hellip;</p>
+                    <div class="clear">
+                        <footer class=" fl_right"><a href="#">Read More</a></footer>
+                        <ul class="nospace meta fl_left">
+                            <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
+                            <li><i class="fa fa-tag"></i> <a href="#">Tag Name</a></li>
+                        </ul>
                     </div>
                 </div>
-                @endforeach
-
-            </div>
-
+            </article>
         </div>
-    </section><!-- End Team Section -->
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-        <div class="container" data-aos="fade-up">
-
-            <div class=" section-title">
-                <h2>Contact</h2>
-                <p>Contact Us</p>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="info-box">
-                                <i class="bx bx-map"></i>
-                                <h3>Our Address</h3>
-                                <p class="pb-2">Room: 9050-52, 8th Floor, MBA Building <br>
-                                    Faculty of Business Studies <br>
-                                    <strong>University of Dhaka</strong>  </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pt-2 " id="map" style='height:400px'></div>
-                </div>
-
-                <div class="col-lg-6 mt-4 mt-lg-0">
-                    <form action="{{route('public.contactStore')}}" method="post" role="form" >
-                        @csrf
-                        <div class="row">
-                            <div class="col-md-6 form-group">
-                                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
-                                       required>
-                            </div>
-                            <div class="col-md-6 form-group mt-3 mt-md-0">
-                                <input type="email" class="form-control" name="email" id="email"
-                                       placeholder="Your Email" required>
-                            </div>
-                        </div>
-                        <div class="form-group mt-3">
-                            <input type="text" class="form-control" name="address" id="address" placeholder="address"
-                                   required>
-                        </div>
-                        <div class="form-group mt-3">
-                            <input type="text" class="form-control" name="phone" id="phone" placeholder="phone"
-                                   required>
-                        </div>
-                        <div class="form-group mt-3">
-                            <textarea class="form-control" name="message" rows="5" placeholder="Message"
-                                      required></textarea>
-                        </div>
-                        @include('sweetalert::alert')
-                        <div class="my-3">
-                            <div class="text-center"><button type="submit" class="btn btn-warning">Send Message</button></div>
-                        </div>
-                    </form>
-                </div>
-
-            </div>
-
+        <footer class="center"><a class="btn" href="#">View More Posts &raquo;</a></footer>
+        <!-- ################################################################################################ -->
+    </section>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper coloured">
+    <article class="hoc cta clear">
+        <!-- ################################################################################################ -->
+        <h6 class="three_quarter first">Nec eros maecenas sed ligula enim proin fermentum</h6>
+        <footer class="one_quarter"><a class="btn" href="#">Viverra vehicula &raquo;</a></footer>
+        <!-- ################################################################################################ -->
+    </article>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row4">
+    <footer id="footer" class="hoc clear">
+        <!-- ################################################################################################ -->
+        <div class="one_quarter first">
+            <h6 class="heading">Nulla tincidunt eget</h6>
+            <ul class="nospace btmspace-30 linklist contact">
+                <li><i class="fa fa-map-marker"></i>
+                    <address>
+                        Street Name &amp; Number, Town, Postcode/Zip
+                    </address>
+                </li>
+                <li><i class="fa fa-phone"></i> +00 (123) 456 7890</li>
+                <li><i class="fa fa-envelope-o"></i> info@domain.com</li>
+            </ul>
+            <ul class="faico clear">
+                <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="faicon-dribble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
         </div>
-    </section><!-- End Contact Section -->
-
-</main><!-- End #main -->
-
-@push('scripts')
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<script>
-    flatpickr("input[type=datetime-local]");
-</script>
-<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCw3JG8x31XxAZ1XBO4Szy_OdDp8qCMs28&callback=initMap"></script>
-<script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>
-
-<script>
-
-    function initMap() {
-        const map = new google.maps.Map(document.getElementById("map"), {
-            zoom: 13,
-            center: {  lat: 23.733860, lng: 90.392869 },
-        });
-
-        marker = new google.maps.Marker({
-            map,
-            draggable: true,
-            animation: google.maps.Animation.DROP,
-            position: { lat: 23.733860, lng: 90.392869 },
-        });
-        marker.addListener("click", toggleBounce);
-    }
-
-    function toggleBounce() {
-        if (marker.getAnimation() !== null) {
-            marker.setAnimation(null);
-        } else {
-            marker.setAnimation(google.maps.Animation.BOUNCE);
-        }
-    }
-
-    window.initMap = initMap;
-
-</script>
-@endpush
-@endsection
+        <div class="one_quarter">
+            <h6 class="heading">Elit eros imperdiet</h6>
+            <ul class="nospace linklist">
+                <li><a href="#">Aenean venenatis leo</a></li>
+                <li><a href="#">In nunc elementum sed</a></li>
+                <li><a href="#">Commodo nibh congue</a></li>
+                <li><a href="#">Donec porttitor nec</a></li>
+                <li><a href="#">Ex id egestas in feugiat</a></li>
+            </ul>
+        </div>
+        <div class="one_quarter">
+            <h6 class="heading">Placerat enim nulla</h6>
+            <article class="btmspace-30">
+                <h6 class="nospace font-x1"><a href="#">Mollis sed dui tempus</a></h6>
+                <time class="smallfont" datetime="2045-04-06">Friday, 6<sup>th</sup> April 2045</time>
+                <p>Fusce sodales hendrerit neque dictum porttitor curabitur&hellip;</p>
+            </article>
+            <article>
+                <h6 class="nospace font-x1"><a href="#">Ultrices posuere justo</a></h6>
+                <time class="smallfont" datetime="2045-04-05">Thursday, 5<sup>th</sup> April 2045</time>
+                <p>Id tincidunt tellus consequat volutpat ut finibus libero&hellip;</p>
+            </article>
+        </div>
+        <div class="one_quarter">
+            <h6 class="heading">Consectetur orci cras</h6>
+            <p class="nospace btmspace-15">Congue eget dolor ac tristique non sapien vulputate ornare enim eu egestas ipsum.</p>
+            <form method="post" action="#">
+                <fieldset>
+                    <legend>Newsletter:</legend>
+                    <input class="btmspace-15" type="text" value="" placeholder="Name">
+                    <input class="btmspace-15" type="text" value="" placeholder="Email">
+                    <button type="submit" value="submit">Submit</button>
+                </fieldset>
+            </form>
+        </div>
+        <!-- ################################################################################################ -->
+    </footer>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row5">
+    <div id="copyright" class="hoc clear">
+        <!-- ################################################################################################ -->
+        <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
+        <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+        <!-- ################################################################################################ -->
+    </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="{{asset('frontend/layout/scripts/jquery.min.js')}}"></script>
+<script src="{{asset('frontend/layout/scripts/jquery.backtotop.js')}}"></script>
+<script src="{{asset('frontend/layout/scripts/jquery.mobilemenu.js')}}"></script>
+</body>
+</html>
