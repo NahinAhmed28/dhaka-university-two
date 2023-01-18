@@ -1,11 +1,19 @@
-<div class="bgded" style="background-image:url({{asset('frontend/images/demo/backgrounds/01.png')}});">
-    <div id="pageintro" class="hoc clear">
-        <!-- ################################################################################################ -->
-        <article>
-            <h3 class="heading">Vestibulum vehicula egestas</h3>
-            <p>Rhoncus a odio fusce eu lorem vehicula euismod mauris eget sodales mi duis habitant morbi tristique senectus et netus et malesuada fames.</p>
-            <footer><a class="btn" href="#">Turpis egestas</a></footer>
-        </article>
-        <!-- ################################################################################################ -->
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+
+    <div class="carousel-inner" >
+        @foreach($heroes as $hero)
+            <div class="carousel-item {{ $loop->first ? 'active' : '' }}"  >
+                <img class="d-block w-100" src="{{asset('assets/uploads/hero/'.$hero->image)}}" alt="First slide" style="margin-top: 10rem;">
+            </div>
+        @endforeach
     </div>
+
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
 </div>

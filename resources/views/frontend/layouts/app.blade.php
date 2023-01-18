@@ -5,8 +5,7 @@
 <body id="top">
 
 
-@include('frontend.layouts.common.header1')
-@include('frontend.layouts.common.header2')
+@include('frontend.layouts.common.header')
 
 
 
