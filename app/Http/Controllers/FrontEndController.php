@@ -38,7 +38,7 @@ class FrontEndController extends Controller
             'mission' => Mission::first(),
             'vision' => Vision::first(),
             'plan' => Plan::first(),
-            'heroes' => Hero::get(),
+            'heros' => Hero::get(),
             'expertises' => Expertise::get(),
             'members' => Member::get(),
             'experts' => Expert::get(),
