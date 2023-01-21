@@ -45,9 +45,9 @@
                     <li><a href="#">Portfolios</a></li>
                 </ul>
             </li>
-            <li><a href="{{route('login')}}">Login</a></li>
 {{--            <li><a href="{{asset('frontend/04-Contact.html')}}">CONTACT</a></li>--}}
             <li><a href="{{asset('frontend/04-Contact.html')}}">CONTACT</a></li>
+            <li><a href="{{route('login')}}">Login</a></li>
         </ul><!-- main-menu -->
 
     </div><!-- conatiner -->

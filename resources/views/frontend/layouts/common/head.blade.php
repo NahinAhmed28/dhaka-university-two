@@ -11,6 +11,7 @@
 
 
     <!-- Stylesheets -->
+    <link href="{{asset('frontend/common-css/custom.css')}}" rel="stylesheet">
 
     <link href="{{asset('frontend/common-css/bootstrap.css')}}" rel="stylesheet">
 
