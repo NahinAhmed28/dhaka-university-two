@@ -19,19 +19,18 @@
                             <div class="col-md-12 video-box align-self-baseline" data-aos="zoom-in" data-aos-delay="100">
                                 <div class="section-title">
                                     <h2>ABOUT US</h2>
-{{--                                    <p>Check our Gallery</p>--}}
                                 </div>
-                                <iframe style="width: 100%; min-height: 300px"  src="https://www.youtube.com/embed/{{getOwnYoutubeIdForEmbed($about->video)}}"
-                                        {{--                            style="height:700px;width:1280px;"--}}
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <iframe style="width: 100%; min-height: 300px"  src="https://www.youtube.com/embed/{{getOwnYoutubeIdForEmbed($about->video)}}"
                                         title="YouTube video player" allowfullscreen></iframe>
-                                {{--                    <img src="{{ asset('frontend/assets/img/about.jpg') }}" class="img-fluid" alt="">--}}
-                                {{--                    <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox play-btn mb-4"></a>--}}
-                            </div>
+                                    </div>
 
-                            <div class="icons">
-                            </div>
-                            <p class="date"><em>Last Updated: {{$about->updated_at}}</em></p>
-                            <p>{!! $about->description !!}</p>
+                                    <div class="col-md-6">
+                                        <p class="date"><em>Last Updated: {{$about->updated_at}}</em></p>
+                                        <p> {!!$about->description!!}</p>
+                                    </div>
+                                </div>
                             <a class="btn read-more-btn" href="#"><b>READ MORE</b></a>
                         </div><!-- single-post -->
 

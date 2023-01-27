@@ -51,6 +51,7 @@ class HeroController extends Controller
             }
             $image->move('assets/uploads/hero', $imageFileName);
 //            Image::make('assets/uploads/hero/'.$imageFileName)->resize(1200,600)->save('assets/uploads/hero/'.$imageFileName);
+            Image::make('assets/uploads/hero/'.$imageFileName)->save('assets/uploads/hero/'.$imageFileName);
         } else {
             $imageFileName = 'default_logo.png';
         }
@@ -113,7 +114,8 @@ class HeroController extends Controller
                 unlink('assets/uploads/hero/'.$hero->image);
             }
             $heroImage->move('assets/uploads/hero', $heroImageFileName);
-//            Image::make('assets/uploads/hero/'.$heroImageFileName)->resize(1200,600)->save('assets/uploads/hero/'.$heroImageFileName);
+//           Image::make('assets/uploads/hero/'.$heroImageFileName)->resize(1200,600)->save('assets/uploads/hero/'.$heroImageFileName);
+           Image::make('assets/uploads/hero/'.$heroImageFileName)->save('assets/uploads/hero/'.$heroImageFileName);
         }
 
         $hero->update([
