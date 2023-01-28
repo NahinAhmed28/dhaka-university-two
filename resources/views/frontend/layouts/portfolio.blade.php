@@ -23,7 +23,7 @@
                             <div class="row">
                                 <div class="section-title col-md-12">
                                     <h2>Galleies</h2>
-                                    <p>Check our Galleies</p>
+
                                 </div>
                                 @foreach($portfolios as $portfolio)
                                     <div class="col-lg-4 col-md-6">

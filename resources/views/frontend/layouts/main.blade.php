@@ -34,7 +34,7 @@
                         <div class="row">
                             <div class="section-title col-md-12">
                                 <h2>Approaches</h2>
-                                <p>Check our Approaches</p>
+
                             </div>
                             <div class="col-lg-4 col-md-4">
                                 <div class="single-post">
@@ -51,7 +51,7 @@
                                 </div><!-- single-post -->
                             </div><!-- col-sm-6 -->
 
-                            <div class="col-lg-4 col-md-4">
+                            <div class="col-lg-4 col-md-">
                                 <div class="single-post">
                                     <div class="image-wrapper">
                                         <img src="{{  asset('assets/uploads/plan/'.$plan->image) }}" class="card-img-top"></div>
@@ -87,10 +87,10 @@
                         <div class="row">
                             <div class="section-title col-md-12">
                                 <h2>Services</h2>
-                                <p>Check our Services</p>
+
                             </div>
                             @foreach ($services as $service)
-                            <div class="col-lg-4 col-md-4 border " >
+                            <div class="col-md-6 border " >
                                 <div class="single-post " >
                                     <div class="image-wrapper"><img src="{{ asset('assets/uploads/service/'.$service->image)}}" alt="Blog Image"></div>
 
@@ -111,7 +111,7 @@
                         <div class="row">
                             <div class="section-title col-md-12">
                                 <h2>Expertises</h2>
-                                <p>Check our Expertises</p>
+
                             </div>
                             @foreach ($expertises as $expertise)
                             <div class="col-lg-4 col-md-4">
@@ -135,34 +135,12 @@
 
                         </div><!-- row -->
 
-                        <div class="row">
-                            <div class="section-title col-md-12">
-                                <h2>Team</h2>
-                                <p>Check our Team</p>
-                            </div>
 
-                            @foreach ($members as $member)
-                            <div class="col-lg-4 col-md-4">
-                                <div class="single-post">
-                                    <div class="image-wrapper"><img src="{{asset('assets/uploads/member/'. $member->image)}}" alt="Blog Image"></div>
 
-                                    <div class="icons">
-                                        <div class="left-area">
-                                            <a class="btn caegory-btn" href="#"><b>{{$member->name}}</b></a>
-                                        </div>
-                                    </div>
-                                    <p>{!! $member->designation !!}</p>
-                                    <a class="btn read-more-btn" href="#"><b>READ MORE</b></a>
-                                </div><!-- single-post -->
-                            </div><!-- col-sm-6 -->
-                            @endforeach
-
-                        </div><!-- row -->
 
                         <div class="row ">
                             <div class="section-title col-md-12">
                                 <h2>Galleies</h2>
-                                <p>Check our Galleies</p>
                             </div>
                             @foreach($galleries as $gallery)
                                 <div class="col-lg-4 col-md-6">
@@ -196,7 +174,7 @@
                         <div class="row">
                             <div class="section-title col-md-12">
                                 <h2>Portfolio</h2>
-                                <p>Check our Portfolio</p>
+
                             </div>
                             @foreach($portfolios as $portfolio)
                                 <div class="col-lg-4 col-md-6">
@@ -226,10 +204,9 @@
 
                         </div><!-- row -->
 
-                        <div class="row">
+                        <div class="row mt-2">
                             <div class="section-title col-md-12">
-                                <h2>Organizations</h2>
-                                <p>Check our Associate Organizations</p>
+                                <h2>Associate Organizations</h2>
                             </div>
                             @foreach($organizations as $organization)
                                 <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
@@ -241,6 +218,31 @@
                         </div><!-- row -->
 
 {{--                        <a class="btn load-more-btn" target="_blank" href="#">LOAD OLDER POSTS</a>--}}
+
+                        <div class="row pt-4">
+                            <div class="section-title col-md-12">
+                                <h2>Trainings</h2>
+                            </div>
+                            @foreach ($trainings as $training)
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="single-post">
+                                        <div class="image-wrapper"><img src="{{ asset('assets/uploads/training/'.$training->image)}}" alt="Blog Image"></div>
+
+                                        <div class="icons">
+                                            <div class="left-area">
+                                                <a class="btn caegory-btn" href="#"><b> {!!$training->title!!}</b></a>
+                                            </div>
+
+                                        </div>
+
+                                        {{--                                    <h3 class="title"><a href="#"><b class="light-color">How to paint the wall and street</b></a></h3>--}}
+                                        <p>{!!  $training->description !!}</p>
+                                    </div><!-- single-post -->
+                                </div><!-- col-sm-6 -->
+                            @endforeach
+
+
+                        </div><!-- row -->
 
                         </div><!-- blog-posts -->
                     </div>

@@ -42,6 +42,7 @@ class FrontEndController extends Controller
             'expertises' => Expertise::get(),
             'members' => Member::get(),
             'experts' => Expert::get(),
+            'trainings' => Training::get(),
             'galleries' => Gallery::orderBy('id', 'DESC')->take(6)->get(),
             'portfolios' => Portfolio::orderBy('id', 'DESC')->take(6)->get(),
             'locations' => [

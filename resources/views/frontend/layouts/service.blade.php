@@ -15,29 +15,29 @@
 
                 <div class="col-md-12">
                     <div class="blog-posts">
-                            <div class="row">
-        <div class="section-title col-md-12">
-            <h2>Services</h2>
-            <p>Check our Services</p>
-        </div>
-        @foreach ($services as $service)
-            <div class="col-lg-4 col-md-4 border " >
-                <div class="single-post p-4">
-                    <div class="image-wrapper"><img src="{{ asset('assets/uploads/service/'.$service->image)}}" alt="Blog Image"></div>
+                        <div class="row">
+                            <div class="section-title col-md-12">
+                                <h2>Services</h2>
+                                <p>Check our Services</p>
+                            </div>
+                            @foreach ($services as $service)
+                                <div class="col-lg-4 col-md-4 border " >
+                                    <div class="single-post p-4">
+                                        <div class="image-wrapper"><img src="{{ asset('assets/uploads/service/'.$service->image)}}" alt="Blog Image"></div>
 
-                    <div class="icons">
-                        <div class="text-center">
-                            <a class="btn caegory-btn " href=""><b>{!!$service->title!!}</b></a>
-                        </div>
-                    </div>
-                    <p>{!!$service->description!!}</p>
+                                        <div class="icons">
+                                            <div class="text-center">
+                                                <a class="btn caegory-btn " href=""><b>{!!$service->title!!}</b></a>
+                                            </div>
+                                        </div>
+                                        <p>{!!$service->description!!}</p>
 
-                </div><!-- single-post -->
-            </div><!-- col-sm-6 -->
-        @endforeach
+                                    </div><!-- single-post -->
+                                </div><!-- col-sm-6 -->
+                            @endforeach
 
 
-    </div><!-- row -->
+                        </div><!-- row -->
 
 
                     </div>

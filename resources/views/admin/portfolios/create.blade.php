@@ -47,7 +47,7 @@
 
                     </div>
                     {{-- this needs to be reciprocated --}}
-                    <div id="emailHelp" class="form-text text-info">Recommended image shape:(640x1000) px </div>
+                    <div id="emailHelp" class="form-text text-info">Recommended image shape:(500x400) px </div>
                     {{-- this one --}}
                     <img class="mt-2" style="display: none" src="#" id="image_tag" width="200px" />
                 </div>

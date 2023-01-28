@@ -42,7 +42,7 @@
                         <div class="invalid-feedback">{{ $errors->first('image') }}</div>
                         @endif
                     </div>
-                    <div id="emailHelp" class="form-text text-info">Recommended image shape:(480x480) px </div>
+                    <div id="emailHelp" class="form-text text-info">Recommended image shape:(500x400) px </div>
                     {{-- this one --}}
                     <img class="mt-2" style="display: none" src="#" id="image_tag" width="200px" />
                 </div>
