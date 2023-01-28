@@ -1,5 +1,4 @@
-
-    <div class="main-slider">
+<div class="main-slider">
     <div id="slider">
         @foreach($heros as $hero)
         <div class="ls-slide" data-ls="bgsize:cover; bgposition:50% 50%; duration:4000; transition2d:104; kenburnsscale:1.00;">

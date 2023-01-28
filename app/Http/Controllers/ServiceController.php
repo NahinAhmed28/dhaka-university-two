@@ -55,7 +55,7 @@ class ServiceController extends Controller
                 mkdir('assets/uploads/service', 0777, true);
             }
             $serviceImage->move('assets/uploads/service', $serviceImageFileName);
-            Image::make('assets/uploads/service/' . $serviceImageFileName)->resize(600, 400)->save('assets/uploads/service/' . $serviceImageFileName);
+            Image::make('assets/uploads/service/' . $serviceImageFileName)->resize(500, 400)->save('assets/uploads/service/' . $serviceImageFileName);
         } else {
             $serviceImageFileName = 'default_logo.png';
         }
@@ -130,7 +130,7 @@ class ServiceController extends Controller
                 unlink('assets/uploads/service/' . $service->image);
             }
             $serviceImage->move('assets/uploads/service', $serviceImageFileName);
-            Image::make('assets/uploads/service/' . $serviceImageFileName)->resize(600, 400)->save('assets/uploads/service/' . $serviceImageFileName);
+            Image::make('assets/uploads/service/' . $serviceImageFileName)->resize(500, 400)->save('assets/uploads/service/' . $serviceImageFileName);
         }
 
         $service->update([

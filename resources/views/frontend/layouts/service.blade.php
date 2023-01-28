@@ -9,43 +9,40 @@
     <!-- ======= Hero Section ======= -->
     @include('frontend.layouts.common.heroheader')
     <!-- End Hero -->
+    <section class="section blog-area">
+        <div class="container">
+            <div class="row">
 
-    <!-- Start #main -->
-    <main id="main">
+                <div class="col-md-12">
+                    <div class="blog-posts">
+                            <div class="row">
+        <div class="section-title col-md-12">
+            <h2>Services</h2>
+            <p>Check our Services</p>
+        </div>
+        @foreach ($services as $service)
+            <div class="col-lg-4 col-md-4 border " >
+                <div class="single-post p-4">
+                    <div class="image-wrapper"><img src="{{ asset('assets/uploads/service/'.$service->image)}}" alt="Blog Image"></div>
 
-        <!-- ======= About Boxes Section ======= -->
-        <section id="about-boxes" class="about-boxes">
-            <div class="container" data-aos="fade-up">
-                <div class="section-title">
-                    <h2>Our</h2>
-                    <p>Services</p>
-                </div>
-                <div class="row">
-                    @foreach ($services as $service)
-                        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                            <div class="card">
-                                <img src="{{ asset('assets/uploads/service/'.$service->image)}}" class="card-img-top"
-                                     alt="...">
-                                <div class="card-icon">
-                                    <i class="ri-brush-4-line"></i>
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title"><a href="">{!!$service->title!!}</a></h5>
-                                    <p class="card-text">{!!$service->description!!}</p>
-                                </div>
-                            </div>
+                    <div class="icons">
+                        <div class="text-center">
+                            <a class="btn caegory-btn " href=""><b>{!!$service->title!!}</b></a>
                         </div>
-                    @endforeach
+                    </div>
+                    <p>{!!$service->description!!}</p>
+
+                </div><!-- single-post -->
+            </div><!-- col-sm-6 -->
+        @endforeach
+
+
+    </div><!-- row -->
+
+
+                    </div>
                 </div>
-
             </div>
-        </section><!-- End About Boxes Section -->
-    </main><!-- End #main -->
-
-    @push('scripts')
-        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-        <script>
-            flatpickr("input[type=datetime-local]");
-        </script>
-    @endpush
+        </div>
+    </section>
 @endsection

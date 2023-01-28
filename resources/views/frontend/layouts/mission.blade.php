@@ -9,58 +9,74 @@
 <!-- ======= Hero Section ======= -->
 @include('frontend.layouts.common.heroheader')
 <!-- End Hero -->
+{{--<div class="custom" style="position: relative; height: 2vh;">--}}
+{{--</div>--}}
+<section class="section blog-area">
+    <div class="container">
+        <div class="row">
 
-<!-- Start #main -->
-<main id="main">
+            <div class="col-md-12">
+                <div class="blog-posts">
+                    <div class="row">
+            <div class="section-title col-md-12">
+                <h2>Approaches</h2>
+                <p>Check our Approaches</p>
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <div class="single-post">
+                    <div class="image-wrapper">
+                        <img src="{{ asset('assets/uploads/mission/'.$mission->image) }}" class="card-img-top"></div>
 
-    <!-- ======= About Boxes Section ======= -->
-    <section id="about-boxes" class="about-boxes">
-        <div class="container" data-aos="fade-up">
-
-            <div class="row">
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card">
-                        <img src="{{ asset('assets/uploads/mission/'.$mission->image) }}" class="card-img-top"
-                            alt="...">
-                        <div class="card-icon">
-                            <i class="ri-brush-4-line"></i>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title"><a href="">Our Mission</a></h5>
-                            <p class="card-text"> {!!$mission->description!!}</p>
+                    <div class="icons">
+                        <div class="left-area">
+                            <a class="btn caegory-btn" href="#"><b>Plan</b></a>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card">
-                        <img src="{{ asset('assets/uploads/plan/'.$plan->image) }}" class="card-img-top" alt="...">
-                        <div class="card-icon">
-                            <i class="ri-calendar-check-line"></i>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title"><a href="">Our Plan</a></h5>
-                            <p class="card-text">{!!$plan->description!!}</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card">
-                        <img src="{{ asset('assets/uploads/vision/'.$vision->image) }}" class="card-img-top" alt="...">
-                        <div class="card-icon">
-                            <i class="ri-movie-2-line"></i>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title"><a href="">Our Vision</a></h5>
-                            <p class="card-text">{!!$vision->description!!}</p>
+                    <p>{!!$mission->description!!}</p>
+
+                </div><!-- single-post -->
+            </div><!-- col-sm-6 -->
+
+            <div class="col-lg-4 col-md-4">
+                <div class="single-post">
+                    <div class="image-wrapper">
+                        <img src="{{  asset('assets/uploads/plan/'.$plan->image) }}" class="card-img-top"></div>
+
+                    <div class="icons">
+                        <div class="left-area">
+                            <a class="btn caegory-btn" href="#"><b>Plan</b></a>
                         </div>
                     </div>
+                    <p>{!!$plan->description!!}</p>
+
+                </div><!-- single-post -->
+            </div><!-- col-sm-6 -->
+
+            <div class="col-lg-4 col-md-4">
+                <div class="single-post">
+                    <div class="image-wrapper">
+                        <img src="{{asset('assets/uploads/vision/'.$vision->image) }}" class="card-img-top"></div>
+
+                    <div class="icons">
+                        <div class="left-area">
+                            <a class="btn caegory-btn" href="#"><b>Vision</b></a>
+                        </div>
+                    </div>
+                    <p>{!!$vision->description!!}</p>
+
+                </div><!-- single-post -->
+            </div><!-- col-sm-6 -->
+
+
+        </div><!-- row -->
                 </div>
             </div>
-
         </div>
-    </section><!-- End About Boxes Section -->
+    </div>
+</section>
 
-</main><!-- End #main -->
+
+
 
 @push('scripts')
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>

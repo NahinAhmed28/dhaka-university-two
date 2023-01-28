@@ -14,43 +14,40 @@
     <main id="main">
 
         <!-- ======= Portfolio Section ======= -->
-        <section id="portfolio" class="portfolio">
-            <div class="container" data-aos="fade-up">
+        <section class="section blog-area">
+            <div class="container">
+                <div class="row">
 
-                <div class="section-title">
-                    <h2>Portfolio</h2>
-                    <p>Check our Portfolio</p>
-                </div>
+                    <div class="col-md-12">
+                        <div class="blog-posts">
+                            <div class="row">
+                                <div class="section-title col-md-12">
+                                    <h2>Galleies</h2>
+                                    <p>Check our Galleies</p>
+                                </div>
+                                @foreach($galleries as $gallery)
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="single-post">
+                                            <div class="image-wrapper">
+                                                <img src="{{asset('frontend/images/blog-3-500x400.jpg')}}" alt="Blog Image"></div>
+                                            <h4>{{$gallery->category}}</h4>
+                                        </div><!-- single-post -->
+                                    </div><!-- col-sm-6 -->
 
-                <div class="row" data-aos="fade-up" data-aos-delay="100">
-{{--                    <div class="col-lg-12 d-flex justify-content-center">--}}
-{{--                        <ul id="portfolio-flters">--}}
-{{--                            <li data-filter="*" class="filter-active">All</li>--}}
-{{--                            <li data-filter=".filter-app">App</li>--}}
-{{--                            <li data-filter=".filter-card">Card</li>--}}
-{{--                            <li data-filter=".filter-web">Web</li>--}}
-{{--                        </ul>--}}
-{{--                    </div>--}}
-                </div>
 
-                <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-                    @foreach($galleries as $gallery)
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <img src="{{ asset('assets/uploads/gallery/'.$gallery->image)}}" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <h4>{{$gallery->category}}</h4>
-                            <a href="{{ asset('assets/uploads/gallery/'.$gallery->image) }}"
-                               data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="{{$gallery->category}}"><i
-                                    class="bx bx-zoom-in"></i></a>
-{{--                            <a href="portfolio-details.html" class="details-link" title="More Details"><i--}}
-{{--                                    class="bx bx-link"></i></a>--}}
+
+                                    <div class="col-lg-12 col-md-12 text-center">
+                                        <a class="btn read-more-btn " href="#"><b>SEE MORE</b></a>
+                                    </div>
+
+                                @endforeach
+                            </div><!-- row -->
+
                         </div>
                     </div>
-                    @endforeach
                 </div>
-
             </div>
-        </section><!-- End Portfolio Section -->
+        </section><!-- End Testimonials Section -->
 
 
     </main><!-- End #main -->

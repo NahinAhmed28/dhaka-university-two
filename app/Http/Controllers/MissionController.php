@@ -98,7 +98,7 @@ class MissionController extends Controller
                 unlink('assets/uploads/mission/'.$mission->image);
             }
             $missionImage->move('assets/uploads/mission', $missionImageFileName);
-            Image::make('assets/uploads/mission/'.$missionImageFileName)->resize(600,400)->save('assets/uploads/mission/'.$missionImageFileName);
+            Image::make('assets/uploads/mission/'.$missionImageFileName)->resize(500,400)->save('assets/uploads/mission/'.$missionImageFileName);
         }
 
         $mission->update([
