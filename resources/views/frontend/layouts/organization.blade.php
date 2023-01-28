@@ -29,14 +29,14 @@
                             @foreach ($members as $member)
                                 <div class="col-lg-4 col-md-4">
                                     <div class="single-post">
-                                        <div class="image-wrapper"><img src="{{asset('frontend/images/blog-3-500x400.jpg')}}" alt="Blog Image"></div>
+                                        <div class="image-wrapper"><img src="{{asset('assets/uploads/member/'. $member->image)}}" alt="Blog Image"></div>
 
                                         <div class="icons">
                                             <div class="left-area">
                                                 <a class="btn caegory-btn" href="#"><b>{{$member->name}}</b></a>
                                             </div>
                                         </div>
-                                        <p>{{$member->designation}}</p>
+                                        <p>{!! $member->designation !!}</p>
                                         <a class="btn read-more-btn" href="#"><b>READ MORE</b></a>
                                     </div><!-- single-post -->
                                 </div><!-- col-sm-6 -->
@@ -63,6 +63,7 @@
                         <img src="{{ asset('assets/uploads/organization/'.$organization->image)}}" class="img-fluid" alt="">
                     </div>
                 @endforeach
+
 
             </div>
 

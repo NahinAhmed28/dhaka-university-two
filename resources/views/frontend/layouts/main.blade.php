@@ -15,22 +15,18 @@
                 <div class="col-md-12">
                     <div class="blog-posts">
 
-                        <div class="single-post">
+                        <div class="single-post" id="about">
                             <div class="col-md-12 video-box align-self-baseline" data-aos="zoom-in" data-aos-delay="100">
                                 <div class="section-title">
                                     <h2>ABOUT US</h2>
                                 </div>
-                                    <div class="row mb-4">
-                                        <div class="col-md-6 mb-6">
-                                            <iframe style="width: 100%; min-height: 300px"  src="https://www.youtube.com/embed/{{getOwnYoutubeIdForEmbed($about->video)}}"
-                                            title="YouTube video player" allowfullscreen></iframe>
-                                        </div>
 
-                                        <div class="col-md-6">
-                                            <p class="date"><em>Last Updated: {{$about->updated_at}}</em></p>
-                                            <p> {!!$about->description!!}</p>
-                                        </div>
-                                    </div>
+                                <iframe style="width: 100%; min-height: 300px"  src="https://www.youtube.com/embed/{{getOwnYoutubeIdForEmbed($about->video)}}"
+                                title="YouTube video player" allowfullscreen></iframe>
+                                <p> {!!$about->description!!}</p>
+                                <p class="date mt-2"><em>Last Updated: {{$about->updated_at}}</em></p>
+
+
                             </div>
                         </div><!-- single-post -->
 
@@ -65,7 +61,7 @@
                                             <a class="btn caegory-btn" href="#"><b>Plan</b></a>
                                         </div>
                                     </div>
-                                    <p>{!!$plan->description!!}</p>
+                                    <p class="px-1">{!!$plan->description!!}</p>
                                     <a class="btn read-more-btn" href="{{route('front.about')}}"><b>READ MORE</b></a>
                                 </div><!-- single-post -->
                             </div><!-- col-sm-6 -->
@@ -95,7 +91,7 @@
                             </div>
                             @foreach ($services as $service)
                             <div class="col-lg-4 col-md-4 border " >
-                                <div class="single-post p-4" >
+                                <div class="single-post " >
                                     <div class="image-wrapper"><img src="{{ asset('assets/uploads/service/'.$service->image)}}" alt="Blog Image"></div>
 
                                     <div class="icons">
@@ -103,7 +99,7 @@
                                             <a class="btn caegory-btn " href=""><b>{!!$service->title!!}</b></a>
                                         </div>
                                     </div>
-                                    <p>{!!$service->description!!}</p>
+                                    <p >{!!$service->description!!}</p>
 
                                 </div><!-- single-post -->
                             </div><!-- col-sm-6 -->
@@ -130,8 +126,7 @@
                                     </div>
 
 {{--                                    <h3 class="title"><a href="#"><b class="light-color">How to paint the wall and street</b></a></h3>--}}
-                                    <p> {!!$expertise->description!!}</p>
-                                    <a class="btn read-more-btn" href="#"><b>READ MORE</b></a>
+                                    <p>{!!  $expertise->description !!}</p>
                                 </div><!-- single-post -->
                             </div><!-- col-sm-6 -->
                             @endforeach
@@ -149,14 +144,14 @@
                             @foreach ($members as $member)
                             <div class="col-lg-4 col-md-4">
                                 <div class="single-post">
-                                    <div class="image-wrapper"><img src="{{asset('frontend/images/blog-3-500x400.jpg')}}" alt="Blog Image"></div>
+                                    <div class="image-wrapper"><img src="{{asset('assets/uploads/member/'. $member->image)}}" alt="Blog Image"></div>
 
                                     <div class="icons">
                                         <div class="left-area">
                                             <a class="btn caegory-btn" href="#"><b>{{$member->name}}</b></a>
                                         </div>
                                     </div>
-                                    <p>{{$member->designation}}</p>
+                                    <p>{!! $member->designation !!}</p>
                                     <a class="btn read-more-btn" href="#"><b>READ MORE</b></a>
                                 </div><!-- single-post -->
                             </div><!-- col-sm-6 -->
@@ -164,29 +159,39 @@
 
                         </div><!-- row -->
 
-                        <div class="row">
+                        <div class="row ">
                             <div class="section-title col-md-12">
                                 <h2>Galleies</h2>
                                 <p>Check our Galleies</p>
                             </div>
                             @foreach($galleries as $gallery)
-                            <div class="col-lg-6 col-md-6">
-                                <div class="single-post">
-                                    <div class="image-wrapper">
+                                <div class="col-lg-4 col-md-6">
+                                    <!-- Add a button to trigger the modal -->
+                                    <div class="single-post">
+                                        <div class="image-wrapper">
+                                            <button type="button" class="btn btn-primary p-0" data-toggle="modal" data-target="#imageModal">
+                                                <img src="{{asset('assets/uploads/gallery/'.$gallery->image)}}" alt="Blog Image">
+                                            </button>
+                                        </div>
 
-                                        <img src="{{asset('frontend/images/blog-3-500x400.jpg')}}" alt="Blog Image"></div>
-                                    <h4>{{$gallery->category}}</h4>
-                                </div><!-- single-post -->
-                            </div><!-- col-sm-6 -->
+                                    </div>
+                                    <!-- Modal -->
+                                    <div class="modal fade my-modal" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
-
-
-                            <div class="col-lg-12 col-md-12 text-center">
-                                <a class="btn read-more-btn " href="#"><b>SEE MORE</b></a>
-                            </div>
+                                    <div class="modal-dialog modal-lg" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-body">
+                                                    <!-- Add your image here -->
+                                                    <img src="{{asset('assets/uploads/gallery/'.$gallery->image)}}" class="img-fluid" alt="your-image-description">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             @endforeach
 
                         </div><!-- row -->
+                        <a class="btn mb-4 " href="#"><b>View MORE</b></a>
 
                         <div class="row">
                             <div class="section-title col-md-12">
@@ -194,90 +199,43 @@
                                 <p>Check our Portfolio</p>
                             </div>
                             @foreach($portfolios as $portfolio)
-                            <div class="col-lg-4 col-md-4">
-                                <div class="single-post">
-                                    <div class="image-wrapper"><img src="{{ asset('assets/uploads/portfolio/'.$portfolio->image)}}" alt="Blog Image"></div>
+                                <div class="col-lg-4 col-md-6">
+                                    <!-- Add a button to trigger the modal -->
+                                    <div class="single-post">
+                                        <div class="image-wrapper">
 
-                                    <a class="btn read-more-btn" href="#"><b>READ MORE</b></a>
-                                </div><!-- single-post -->
-                            </div><!-- col-sm-6 -->
+                                            <button type="button" class="btn btn-primary p-0" data-toggle="modal" data-target="#portfolioModal">
+                                                <img src="{{asset('assets/uploads/portfolio/'.$portfolio->image)}}" alt="Blog Image">
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="portfolioModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-body">
+                                                    <!-- Add your image here -->
+                                                    <img src="{{asset('assets/uploads/portfolio/'.$portfolio->image)}}" class="img-fluid" alt="your-image-description">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             @endforeach
 
                         </div><!-- row -->
 
                         <div class="row">
                             <div class="section-title col-md-12">
-                                <h2>Services</h2>
-                                <p>Check our Services</p>
+                                <h2>Organizations</h2>
+                                <p>Check our Associate Organizations</p>
                             </div>
-                            <div class="col-lg-4 col-md-4">
-                                <div class="single-post">
-                                    <div class="image-wrapper"><img src="{{asset('frontend/images/blog-3-500x400.jpg')}}" alt="Blog Image"></div>
-
-                                    <div class="icons">
-                                        <div class="left-area">
-                                            <a class="btn caegory-btn" href="#"><b>TRAVEL</b></a>
-                                        </div>
-                                        <ul class="right-area social-icons">
-                                            <li><a href="#"><i class="ion-android-share-alt"></i>Share</a></li>
-                                            <li><a href="#"><i class="ion-android-favorite-outline"></i>03</a></li>
-                                            <li><a href="#"><i class="ion-android-textsms"></i>06</a></li>
-                                        </ul>
-                                    </div>
-                                    <h6 class="date"><em>Monday, October 13, 2017</em></h6>
-                                    <h3 class="title"><a href="#"><b class="light-color">How to paint the wall and street</b></a></h3>
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit doloremque
-                                        laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi
-                                        dolore magnam aliquam quaerat voluptatem.</p>
-                                    <a class="btn read-more-btn" href="#"><b>READ MORE</b></a>
-                                </div><!-- single-post -->
-                            </div><!-- col-sm-6 -->
-
-                            <div class="col-lg-4 col-md-4">
-                                <div class="single-post">
-                                    <div class="image-wrapper"><img src="{{asset('frontend/images/blog-4-500x400.jpg')}}" alt="Blog Image"></div>
-
-                                    <div class="icons">
-                                        <div class="left-area">
-                                            <a class="btn caegory-btn" href="#"><b>TRAVEL</b></a>
-                                        </div>
-                                        <ul class="right-area social-icons">
-                                            <li><a href="#"><i class="ion-android-share-alt"></i>Share</a></li>
-                                            <li><a href="#"><i class="ion-android-favorite-outline"></i>03</a></li>
-                                            <li><a href="#"><i class="ion-android-textsms"></i>06</a></li>
-                                        </ul>
-                                    </div>
-                                    <h6 class="date"><em>Monday, October 13, 2017</em></h6>
-                                    <h3 class="title"><a href="#"><b class="light-color">One more night in the local clubs</b></a></h3>
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit doloremque
-                                        laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi
-                                        dolore magnam aliquam quaerat voluptatem.</p>
-                                    <a class="btn read-more-btn" href="#"><b>READ MORE</b></a>
-                                </div><!-- single-post -->
-                            </div><!-- col-sm-6 -->
-
-                            <div class="col-lg-4 col-md-4">
-                                <div class="single-post">
-                                    <div class="image-wrapper"><img src="{{asset('frontend/images/blog-5-500x400.jpg')}}" alt="Blog Image"></div>
-
-                                    <div class="icons">
-                                        <div class="left-area">
-                                            <a class="btn caegory-btn" href="#"><b>TRAVEL</b></a>
-                                        </div>
-                                        <ul class="right-area social-icons">
-                                            <li><a href="#"><i class="ion-android-share-alt"></i>Share</a></li>
-                                            <li><a href="#"><i class="ion-android-favorite-outline"></i>03</a></li>
-                                            <li><a href="#"><i class="ion-android-textsms"></i>06</a></li>
-                                        </ul>
-                                    </div>
-                                    <h6 class="date"><em>Monday, October 13, 2017</em></h6>
-                                    <h3 class="title"><a href="#"><b class="light-color">A new festival in your town</b></a></h3>
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit doloremque
-                                        laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi
-                                        dolore magnam aliquam quaerat voluptatem.</p>
-                                    <a class="btn read-more-btn" href="#"><b>READ MORE</b></a>
-                                </div><!-- single-post -->
-                            </div><!-- col-sm-6 -->
+                            @foreach($organizations as $organization)
+                                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                                    <img src="{{ asset('assets/uploads/organization/'.$organization->image)}}" class="img-fluid" alt="">
+                                </div>
+                            @endforeach
 
 
                         </div><!-- row -->

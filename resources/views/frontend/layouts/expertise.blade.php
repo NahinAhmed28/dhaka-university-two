@@ -39,8 +39,10 @@
                                         </div>
 
                                         {{--                                    <h3 class="title"><a href="#"><b class="light-color">How to paint the wall and street</b></a></h3>--}}
-                                        <p> {!!$expertise->description!!}</p>
-                                        <a class="btn read-more-btn" href="#"><b>READ MORE</b></a>
+                                        <p>{!!  $expertise->description !!}</p>
+
+
+
                                     </div><!-- single-post -->
                                 </div><!-- col-sm-6 -->
                             @endforeach

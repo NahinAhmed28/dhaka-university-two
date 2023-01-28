@@ -272,7 +272,7 @@ header .main-menu li.drop-down a.mouseover + ul.drop-down-menu{ display: block;
 
 .single-post .title{ margin: 20px 0 15px; }
 
-.single-post .date{ color: #999; }
+.single-post .date{ color: #999; font-weight: bold}
 
 .single-post .desc{ margin: 30px 0; }
 
