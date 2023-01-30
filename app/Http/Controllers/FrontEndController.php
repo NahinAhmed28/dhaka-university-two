@@ -40,11 +40,10 @@ class FrontEndController extends Controller
             'plan' => Plan::first(),
             'heros' => Hero::get(),
             'expertises' => Expertise::get(),
-            'members' => Member::get(),
             'experts' => Expert::get(),
             'trainings' => Training::get(),
-            'galleries' => Gallery::orderBy('id', 'DESC')->take(6)->get(),
-            'portfolios' => Portfolio::orderBy('id', 'DESC')->take(6)->get(),
+            'galleries' => Gallery::orderBy('id', 'DESC')->take(3)->get(),
+            'portfolios' => Portfolio::orderBy('id', 'DESC')->take(3)->get(),
             'locations' => [
                 [23.735708,  90.392929],
             ]
