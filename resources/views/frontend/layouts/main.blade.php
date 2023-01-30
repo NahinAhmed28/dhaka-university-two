@@ -23,7 +23,7 @@
 
                                 <iframe style="width: 100%; min-height: 300px"  src="https://www.youtube.com/embed/{{getOwnYoutubeIdForEmbed($about->video)}}"
                                 title="YouTube video player" allowfullscreen></iframe>
-                                <p> {!!$about->description!!}</p>
+                                <p class="mt-4"> {!!$about->description!!}</p>
                                 <p class="date mt-2"><em>Last Updated: {{$about->updated_at}}</em></p>
 
 
