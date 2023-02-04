@@ -1,4 +1,4 @@
-<div class="app-sidebar sidebar-shadow">
+
     <div class="app-header__logo">
         <div class="logo-src"></div>
         <div class="header__pane ml-auto">
@@ -356,7 +356,7 @@
                 <li>
                     <a href="#">
                         <i class="metismenu-icon pe-7s-news-paper"></i>
-                        CEO
+                       Organization CEO
                         <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                     </a>
                     <ul>
@@ -418,7 +418,7 @@
                 <li>
                     <a href="#">
                         <i class="metismenu-icon pe-7s-users"></i>
-                        Organization Experts
+                        Experts Opinions
                         <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                     </a>
                     <ul>
@@ -536,4 +536,4 @@
             </ul>
         </div>
     </div>
-</div>
+

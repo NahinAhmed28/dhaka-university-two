@@ -94,7 +94,7 @@ class CeoController extends Controller
                 unlink('assets/uploads/ceo/'.$ceo->image);
             }
             $ceoImage->move('assets/uploads/ceo', $ceoImageFileName);
-            Image::make('assets/uploads/ceo/'.$ceoImageFileName)->resize(500,400)->save('assets/uploads/ceo/'.$ceoImageFileName);
+            Image::make('assets/uploads/ceo/'.$ceoImageFileName)->resize(600,600)->save('assets/uploads/ceo/'.$ceoImageFileName);
         }
 
         $ceo->update([

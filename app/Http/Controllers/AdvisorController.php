@@ -55,7 +55,7 @@ class AdvisorController extends Controller
                 mkdir('assets/uploads/advisor', 0777, true);
             }
             $image->move('assets/uploads/advisor', $imageFileName);
-            Image::make('assets/uploads/advisor/'.$imageFileName)->resize(500,400)->save('assets/uploads/advisor/'.$imageFileName);
+            Image::make('assets/uploads/advisor/'.$imageFileName)->resize(600,600)->save('assets/uploads/advisor/'.$imageFileName);
         } else {
             $imageFileName = 'default_logo.png';
         }
@@ -125,7 +125,7 @@ class AdvisorController extends Controller
                 unlink('assets/uploads/advisor/'.$advisor->image);
             }
             $advisorImage->move('assets/uploads/advisor', $advisorImageFileName);
-            Image::make('assets/uploads/advisor/'.$advisorImageFileName)->resize(500,400)->save('assets/uploads/advisor/'.$advisorImageFileName);
+            Image::make('assets/uploads/advisor/'.$advisorImageFileName)->resize(600,600)->save('assets/uploads/advisor/'.$advisorImageFileName);
         }
 
         $advisor->update([

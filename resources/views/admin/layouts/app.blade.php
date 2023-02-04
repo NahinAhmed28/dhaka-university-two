@@ -10,9 +10,10 @@
     <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
         @include('admin.layouts.common.header')
 
-        <div class="app-main">
-            @include('admin.layouts.common.sidebar')
-
+        <div class="app-main" >
+            <div class="app-sidebar sidebar-shadow" >
+                @include('admin.layouts.common.sidebar')
+            </div>
             <div class="app-main__outer">
                 @yield('content')
             </div>
