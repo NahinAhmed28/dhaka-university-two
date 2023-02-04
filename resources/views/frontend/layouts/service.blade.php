@@ -21,24 +21,22 @@
                                 <p>Check our Services</p>
                             </div>
                             @foreach ($services as $service)
-                                <div class="col-lg-4 col-md-4 border " >
-                                    <div class="single-post p-4">
+                                <div class="col-md-6 border " >
+                                    <div class="single-post " >
                                         <div class="image-wrapper"><img src="{{ asset('assets/uploads/service/'.$service->image)}}" alt="Blog Image"></div>
 
                                         <div class="icons">
                                             <div class="text-center">
-                                                <a class="btn caegory-btn " href=""><b>{!!$service->title!!}</b></a>
+                                                <a class=" caegory-btn " href=""><b>{!!$service->title!!}</b></a>
                                             </div>
                                         </div>
-
-                                        <p>
-                                            {!! Str::limit(strip_tags($service->description), 100) !!}...
-                                        </p>
-
-
+                                        <p>   {!! Str::limit(strip_tags($service->description), 100) !!}... </p>
+                                        <a class=" read-more-btn"  href="#"><b>READ MORE</b></a>
                                     </div><!-- single-post -->
                                 </div><!-- col-sm-6 -->
                             @endforeach
+
+
 
 
                         </div><!-- row -->

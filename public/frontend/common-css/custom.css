@@ -11,7 +11,7 @@
     margin: 0 0 5px 0 !important;
     letter-spacing: 2px !important;
     text-transform: uppercase !important;
-    color: #5c8eb0;
+    color: #48568d;
     font-family: "Poppins", sans-serif !important;
 }
 
@@ -20,7 +20,7 @@
     width: 120px !important;
     height: 1px !important;
     display: inline-block !important;
-    background: #ff8664 !important;
+    background: #5dad2e !important;
     margin: 4px 10px !important;
 }
 .section-title p {
@@ -102,4 +102,7 @@
 }
 li a:hover{
     color: dodgerblue;
+}
+.btn-bg{
+    background: #0ba360!important;
 }

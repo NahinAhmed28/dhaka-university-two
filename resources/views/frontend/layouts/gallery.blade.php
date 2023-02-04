@@ -22,22 +22,21 @@
                         <div class="blog-posts">
                             <div class="row">
                                 <div class="section-title col-md-12">
-                                    <h2>Galleies</h2>
-                                    <p>Check our Galleies</p>
+                                    <h2>Gallery</h2>
                                 </div>
-                                @foreach($galleries as $gallery)
+                                @foreach($galleries as $index => $gallery)
                                     <div class="col-lg-4 col-md-6">
                                         <!-- Add a button to trigger the modal -->
                                         <div class="single-post">
                                             <div class="image-wrapper">
-                                                <button type="button" class="btn btn-primary p-0" data-toggle="modal" data-target="#imageModal">
+                                                <button type="button" class="btn btn-primary p-0" data-toggle="modal" data-target="#imageModal-{{$index}}">
                                                     <img src="{{asset('assets/uploads/gallery/'.$gallery->image)}}" alt="Blog Image"> <br>
                                                 </button>
                                             </div>
 
                                         </div>
                                         <!-- Modal -->
-                                        <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal fade" id="imageModal-{{$index}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog modal-lg" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-body">

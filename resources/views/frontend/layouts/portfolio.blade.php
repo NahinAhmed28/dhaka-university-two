@@ -25,7 +25,7 @@
                                     <h2>Galleies</h2>
 
                                 </div>
-                                @foreach($portfolios as $portfolio)
+                                @foreach($portfolios as $index =>$portfolio)
                                     <div class="col-lg-4 col-md-6">
                                         <!-- Add a button to trigger the modal -->
                                         <div class="single-post">

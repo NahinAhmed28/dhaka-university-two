@@ -33,20 +33,18 @@
 
                                         <div class="icons">
                                             <div class="left-area">
-                                                <a class="btn caegory-btn" href="#"><b> {!!$expertise->title!!}</b></a>
+                                                <a class=" caegory-btn" href="#"><b> {!!$expertise->title!!}</b></a>
                                             </div>
 
                                         </div>
 
                                         {{--                                    <h3 class="title"><a href="#"><b class="light-color">How to paint the wall and street</b></a></h3>--}}
                                         <p> {!! Str::limit(strip_tags($expertise->description), 100) !!} ...</p>
-
-
-
-
+                                        <a class=" read-more-btn"  href="#"><b>READ MORE</b></a>
                                     </div><!-- single-post -->
                                 </div><!-- col-sm-6 -->
                             @endforeach
+
 
 
 

@@ -23,7 +23,7 @@
 
                                 <iframe style="width: 100%; min-height: 300px"  src="https://www.youtube.com/embed/{{getOwnYoutubeIdForEmbed($about->video)}}"
                                 title="YouTube video player" allowfullscreen></iframe>
-                                <p class="mt-4"> {!!$about->description!!}</p>
+                                <p class="mt-4 mx-5"> {!!$about->description!!}</p>
                                 <p class="date mt-2"><em>Last Updated: {{$about->updated_at}}</em></p>
 
 
@@ -43,11 +43,11 @@
 
                                     <div class="icons">
                                         <div class="left-area">
-                                            <a class="btn caegory-btn" href="#"><b>Mission</b></a>
+                                            <a class=" caegory-btn" href="#"><b>Mission</b></a>
                                         </div>
                                     </div>
                                     <p> {!! Str::limit(strip_tags($mission->description), 100) !!} ...</p>
-                                    <a class="btn read-more-btn" href="{{route('front.about')}}"><b>READ MORE</b></a>
+                                    <a class="read-more-btn" href="#"><b>READ MORE</b></a>
                                 </div><!-- single-post -->
                             </div><!-- col-sm-6 -->
 
@@ -58,11 +58,11 @@
 
                                     <div class="icons">
                                         <div class="left-area">
-                                            <a class="btn caegory-btn" href="#"><b>Plan</b></a>
+                                            <a class=" caegory-btn" href="#"><b>Plan</b></a>
                                         </div>
                                     </div>
                                     <p> {!! Str::limit(strip_tags($plan->description), 100) !!}...</p>
-                                    <a class="btn read-more-btn" href="{{route('front.about')}}"><b>READ MORE</b></a>
+                                    <a class=" read-more-btn"  href="#"><b>READ MORE</b></a>
                                 </div><!-- single-post -->
                             </div><!-- col-sm-6 -->
 
@@ -73,15 +73,15 @@
 
                                     <div class="icons">
                                         <div class="left-area">
-                                            <a class="btn caegory-btn" href="#"><b>Vision</b></a>
+                                            <a class=" caegory-btn" href="#"><b>Vision</b></a>
                                         </div>
                                     </div>
                                     <p> {!! Str::limit(strip_tags($vision->description), 100) !!} ...</p>
-                                    <a class="btn read-more-btn" href="{{route('front.about')}}"><b>READ MORE</b></a>
+                                    <a class=" read-more-btn" href="#"><b>READ MORE</b></a>
                                 </div><!-- single-post -->
                             </div><!-- col-sm-6 -->
 
-
+                            <a class="btn btn-bg mb-4 mx-auto" target="_blank" href="{{route('front.about')}}"><b>View MORE</b></a>
                         </div><!-- row -->
 
                         <div class="row">
@@ -96,16 +96,16 @@
 
                                     <div class="icons">
                                         <div class="text-center">
-                                            <a class="btn caegory-btn " href=""><b>{!!$service->title!!}</b></a>
+                                            <a class=" caegory-btn " href=""><b>{!!$service->title!!}</b></a>
                                         </div>
                                     </div>
-                                    {!! Str::limit(strip_tags($service->description), 100) !!}...
-
+                                 <p>   {!! Str::limit(strip_tags($service->description), 100) !!}... </p>
+                                    <a class=" read-more-btn"  href="#"><b>READ MORE</b></a>
                                 </div><!-- single-post -->
                             </div><!-- col-sm-6 -->
                             @endforeach
 
-
+                            <a class="btn btn-bg mb-4 mx-auto" href="#"><b>View MORE</b></a>
                         </div><!-- row -->
 
                         <div class="row">
@@ -120,19 +120,18 @@
 
                                     <div class="icons">
                                         <div class="left-area">
-                                            <a class="btn caegory-btn" href="#"><b> {!!$expertise->title!!}</b></a>
+                                            <a class=" caegory-btn" href="#"><b> {!!$expertise->title!!}</b></a>
                                         </div>
 
                                     </div>
 
 {{--                                    <h3 class="title"><a href="#"><b class="light-color">How to paint the wall and street</b></a></h3>--}}
                                     <p> {!! Str::limit(strip_tags($expertise->description), 100) !!} ...</p>
+                                    <a class=" read-more-btn"  href="#"><b>READ MORE</b></a>
                                 </div><!-- single-post -->
                             </div><!-- col-sm-6 -->
                             @endforeach
-
-
-
+                            <a class="btn btn-bg mb-4 mx-auto" href="#"><b>View MORE</b></a>
                         </div><!-- row -->
 
 
@@ -140,23 +139,22 @@
 
                         <div class="row ">
                             <div class="section-title col-md-12">
-                                <h2>Galleies</h2>
+                                <h2>Gallery</h2>
                             </div>
-                            @foreach($galleries as $gallery)
+                            @foreach($galleries as $index => $gallery)
                                 <div class="col-lg-4 col-md-6">
                                     <!-- Add a button to trigger the modal -->
                                     <div class="single-post">
                                         <div class="image-wrapper">
-                                            <button type="button" class="btn btn-primary p-0" data-toggle="modal" data-target="#imageModal">
-                                                <img src="{{asset('assets/uploads/gallery/'.$gallery->image)}}" alt="Blog Image">
+                                            <button type="button" class="btn btn-primary p-0" data-toggle="modal" data-target="#galleryModal-{{$index}}">
+                                                <img src="{{asset('assets/uploads/gallery/'.$gallery->image)}}" alt="Blog Image"> <br>
                                             </button>
                                         </div>
 
                                     </div>
                                     <!-- Modal -->
-                                    <div class="modal fade my-modal" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-
-                                    <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal fade" id="galleryModal-{{$index}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-body">
                                                     <!-- Add your image here -->
@@ -167,29 +165,29 @@
                                     </div>
                                 </div>
                             @endforeach
-
+                            <a class="btn btn-bg mb-4 mx-auto" href="{{route('front.gallery')}}"><b>View MORE</b></a>
                         </div><!-- row -->
-                        <a class="btn mb-4 " href="#"><b>View MORE</b></a>
+
 
                         <div class="row">
                             <div class="section-title col-md-12">
                                 <h2>Portfolio</h2>
 
                             </div>
-                            @foreach($portfolios as $portfolio)
+                            @foreach($portfolios as $index => $portfolio)
                                 <div class="col-lg-4 col-md-6">
                                     <!-- Add a button to trigger the modal -->
                                     <div class="single-post">
                                         <div class="image-wrapper">
 
-                                            <button type="button" class="btn btn-primary p-0" data-toggle="modal" data-target="#portfolioModal">
+                                            <button type="button" class="btn btn-primary p-0" data-toggle="modal" data-target="#portfolioModal-{{$index}}">
                                                 <img src="{{asset('assets/uploads/portfolio/'.$portfolio->image)}}" alt="Blog Image">
                                             </button>
                                         </div>
 
                                     </div>
                                     <!-- Modal -->
-                                    <div class="modal fade" id="portfolioModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal fade" id="portfolioModal-{{$index}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog modal-lg" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-body">
@@ -201,7 +199,7 @@
                                     </div>
                                 </div>
                             @endforeach
-
+                            <a class="btn btn-bg mb-4 mx-auto" href="#"><b>View MORE</b></a>
                         </div><!-- row -->
 
                         <!-- ======= Clients Section ======= -->
@@ -237,13 +235,14 @@
 
                                         <div class="icons">
                                             <div class="left-area">
-                                                <a class="btn caegory-btn" href="#"><b> {!!$training->title!!}</b></a>
+                                                <a class=" caegory-btn" href="#"><b> {!!$training->title!!}</b></a>
                                             </div>
 
                                         </div>
 
                                         {{--                                    <h3 class="title"><a href="#"><b class="light-color">How to paint the wall and street</b></a></h3>--}}
                                         <p> {!! Str::limit(strip_tags($training->description), 100) !!} ...</p>
+                                        <a class=" read-more-btn"  href="#"><b>READ MORE</b></a>
                                     </div><!-- single-post -->
                                 </div><!-- col-sm-6 -->
                             @endforeach

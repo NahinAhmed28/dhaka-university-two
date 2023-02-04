@@ -31,13 +31,13 @@
 
                                         <div class="icons">
                                             <div class="left-area">
-                                                <a class="btn caegory-btn" href="#"><b>{{$ceo->name}}</b></a>
+                                                <a class=" caegory-btn" href="#"><b>{{$ceo->name}}</b></a>
                                             </div>
                                         </div>
                                         <div  style=" font-style: italic !important;">
                                             <p>{!! $ceo->designation !!}</p>
                                         </div>
-                                        <a class="btn read-more-btn" href="#"><b>READ MORE</b></a>
+                                        <a class=" read-more-btn" href="#"><b> MORE</b></a>
                                     </div><!-- single-post -->
                                 </div><!-- col-sm-6 -->
 
@@ -68,13 +68,13 @@
 
                                         <div class="icons">
                                             <div class="left-area">
-                                                <a class="btn caegory-btn" href="#"><b>{{$advisor->name}}</b></a>
+                                                <a class=" caegory-btn" href="#"><b>{{$advisor->name}}</b></a>
                                             </div>
                                         </div>
                                         <div  style=" font-style: italic !important;">
                                             <p>{!! $advisor->designation !!}</p>
                                         </div>
-                                        <a class="btn read-more-btn" href="#"><b>READ MORE</b></a>
+                                        <a class=" read-more-btn" href="#"><b> MORE</b></a>
                                     </div><!-- single-post -->
                                 </div><!-- col-sm-6 -->
                             @endforeach
@@ -104,13 +104,13 @@
 
                                         <div class="icons">
                                             <div class="left-area">
-                                                <a class="btn caegory-btn" href="#"><b>{{$member->name}}</b></a>
+                                                <a class="caegory-btn" href="#"><b>{{$member->name}}</b></a>
                                             </div>
                                         </div>
-                                        <div  style=" font-style: italic !important;">
+                                        <div style=" font-style: italic !important;">
                                             <p>{!! $member->designation !!}</p>
                                         </div>
-                                        <a class="btn read-more-btn" href="#"><b>READ MORE</b></a>
+                                        <a class="read-more-btn" href="#"><b> MORE</b></a>
                                     </div><!-- single-post -->
                                 </div><!-- col-sm-6 -->
                             @endforeach

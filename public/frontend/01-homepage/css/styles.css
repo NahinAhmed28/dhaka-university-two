@@ -277,7 +277,7 @@ header .main-menu li.drop-down a.mouseover + ul.drop-down-menu{ display: block;
 
 .single-post .icons{ overflow: hidden; line-height: 30px; margin: 30px 0 10px; }
 
-.single-post .icons .caegory-btn{ padding: 0 20px; height: 30px; line-height: 30px; }
+.single-post .icons .caegory-btn{ padding: 0 20px; height: 30px; line-height: 30px; color: #b06bcb !important;}
 
 .single-post .icons ul.social-icons{ color: #666; }
 
@@ -290,7 +290,7 @@ header .main-menu li.drop-down a.mouseover + ul.drop-down-menu{ display: block;
 .single-post .date{ color: #999; }
 
 .single-post .read-more-btn{ clear: both; margin-top: 30px; box-shadow: 1px 10px 15px rgba(0,0,0, .15);
-	border: 1px solid #FFAD4D; background: #fff; color: #FFAD4D; }
+	border: 1px solid #184808; background: #fff; color: #507c41; padding: 2%}
 
 .single-post .read-more-btn:hover{ box-shadow: 1px 3px 15px rgba(0,0,0, .15); background: #FFAD4D; color: #fff; }
 

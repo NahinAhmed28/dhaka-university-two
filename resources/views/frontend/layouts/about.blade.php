@@ -11,7 +11,7 @@
 <!-- Start #main -->
 <main id="main">
 
-    <div class="single-post">
+    <div class="single-post mx-5">
         <div class="col-md-12 video-box align-self-baseline" data-aos="zoom-in" data-aos-delay="100">
             <div class="section-title">
                 <h2>ABOUT US</h2>
@@ -24,10 +24,8 @@
             {{--                    <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox play-btn mb-4"></a>--}}
         </div>
 
-        <div class="icons">
-        </div>
+        <p class="mx-5"> {!! $about->description !!}</p>
         <p class="date"><em>Last Updated: {{$about->updated_at}}</em></p>
-        <p>{!! $about->description !!}</p>
 
     </div><!-- single-post -->
     <!-- ======= About Boxes Section ======= -->
@@ -40,7 +38,6 @@
                         <div class="row">
                             <div class="section-title col-md-12">
                                 <h2>Approaches</h2>
-                                <p>Check our Approaches</p>
                             </div>
                             <div class="col-lg-4 col-md-4">
                                 <div class="single-post">
@@ -49,26 +46,26 @@
 
                                     <div class="icons">
                                         <div class="left-area">
-                                            <a class="btn caegory-btn" href="#"><b>Plan</b></a>
+                                            <a class=" caegory-btn" href="#"><b>Mission</b></a>
                                         </div>
                                     </div>
                                     <p> {!! Str::limit(strip_tags($mission->description), 100) !!} ...</p>
-
+                                    <a class="read-more-btn" href="#"><b>READ MORE</b></a>
                                 </div><!-- single-post -->
                             </div><!-- col-sm-6 -->
 
-                            <div class="col-lg-4 col-md-4">
+                            <div class="col-lg-4 col-md-">
                                 <div class="single-post">
                                     <div class="image-wrapper">
                                         <img src="{{  asset('assets/uploads/plan/'.$plan->image) }}" class="card-img-top"></div>
 
                                     <div class="icons">
                                         <div class="left-area">
-                                            <a class="btn caegory-btn" href="#"><b>Plan</b></a>
+                                            <a class=" caegory-btn" href="#"><b>Plan</b></a>
                                         </div>
                                     </div>
-                                    <p> {!! Str::limit(strip_tags($plan->description), 100) !!} ...</p>
-
+                                    <p> {!! Str::limit(strip_tags($plan->description), 100) !!}...</p>
+                                    <a class=" read-more-btn"  href="#"><b>READ MORE</b></a>
                                 </div><!-- single-post -->
                             </div><!-- col-sm-6 -->
 
@@ -79,12 +76,11 @@
 
                                     <div class="icons">
                                         <div class="left-area">
-                                            <a class="btn caegory-btn" href="#"><b>Vision</b></a>
+                                            <a class=" caegory-btn" href="#"><b>Vision</b></a>
                                         </div>
                                     </div>
                                     <p> {!! Str::limit(strip_tags($vision->description), 100) !!} ...</p>
-
-
+                                    <a class=" read-more-btn" href="#"><b>READ MORE</b></a>
                                 </div><!-- single-post -->
                             </div><!-- col-sm-6 -->
 
