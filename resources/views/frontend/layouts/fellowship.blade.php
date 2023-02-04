@@ -32,7 +32,7 @@
                         </div>
                         <div class="card-body">
                             <h5 class="card-title"><a href="">{!!$fellowship->title!!}</a></h5>
-                            <p class="card-text">{!!$fellowship->description!!}</p>
+                            <p> {!! Str::limit(strip_tags($fellowship->description), 100) !!} ...</p>
                         </div>
                     </div>
                 </div>

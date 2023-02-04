@@ -30,7 +30,11 @@
                                                 <a class="btn caegory-btn " href=""><b>{!!$service->title!!}</b></a>
                                             </div>
                                         </div>
-                                        <p>{!!$service->description!!}</p>
+
+                                        <p>
+                                            {!! Str::limit(strip_tags($service->description), 100) !!}...
+                                        </p>
+
 
                                     </div><!-- single-post -->
                                 </div><!-- col-sm-6 -->

@@ -52,7 +52,7 @@
                                             <a class="btn caegory-btn" href="#"><b>Plan</b></a>
                                         </div>
                                     </div>
-                                    <p>{!!$mission->description!!}</p>
+                                    <p> {!! Str::limit(strip_tags($mission->description), 100) !!} ...</p>
 
                                 </div><!-- single-post -->
                             </div><!-- col-sm-6 -->
@@ -67,7 +67,7 @@
                                             <a class="btn caegory-btn" href="#"><b>Plan</b></a>
                                         </div>
                                     </div>
-                                    <p>{!!$plan->description!!}</p>
+                                    <p> {!! Str::limit(strip_tags($plan->description), 100) !!} ...</p>
 
                                 </div><!-- single-post -->
                             </div><!-- col-sm-6 -->
@@ -82,7 +82,8 @@
                                             <a class="btn caegory-btn" href="#"><b>Vision</b></a>
                                         </div>
                                     </div>
-                                    <p>{!!$vision->description!!}</p>
+                                    <p> {!! Str::limit(strip_tags($vision->description), 100) !!} ...</p>
+
 
                                 </div><!-- single-post -->
                             </div><!-- col-sm-6 -->

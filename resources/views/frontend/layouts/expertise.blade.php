@@ -39,7 +39,8 @@
                                         </div>
 
                                         {{--                                    <h3 class="title"><a href="#"><b class="light-color">How to paint the wall and street</b></a></h3>--}}
-                                        <p>{!!  $expertise->description !!}</p>
+                                        <p> {!! Str::limit(strip_tags($expertise->description), 100) !!} ...</p>
+
 
 
 

@@ -46,7 +46,7 @@
                                             <a class="btn caegory-btn" href="#"><b>Mission</b></a>
                                         </div>
                                     </div>
-                                    <p>{!!$mission->description!!}</p>
+                                    <p> {!! Str::limit(strip_tags($mission->description), 100) !!} ...</p>
                                     <a class="btn read-more-btn" href="{{route('front.about')}}"><b>READ MORE</b></a>
                                 </div><!-- single-post -->
                             </div><!-- col-sm-6 -->
@@ -61,7 +61,7 @@
                                             <a class="btn caegory-btn" href="#"><b>Plan</b></a>
                                         </div>
                                     </div>
-                                    <p class="px-1">{!!$plan->description!!}</p>
+                                    <p> {!! Str::limit(strip_tags($plan->description), 100) !!}...</p>
                                     <a class="btn read-more-btn" href="{{route('front.about')}}"><b>READ MORE</b></a>
                                 </div><!-- single-post -->
                             </div><!-- col-sm-6 -->
@@ -76,7 +76,7 @@
                                             <a class="btn caegory-btn" href="#"><b>Vision</b></a>
                                         </div>
                                     </div>
-                                    <p>{!!$vision->description!!}</p>
+                                    <p> {!! Str::limit(strip_tags($vision->description), 100) !!} ...</p>
                                     <a class="btn read-more-btn" href="{{route('front.about')}}"><b>READ MORE</b></a>
                                 </div><!-- single-post -->
                             </div><!-- col-sm-6 -->
@@ -99,7 +99,7 @@
                                             <a class="btn caegory-btn " href=""><b>{!!$service->title!!}</b></a>
                                         </div>
                                     </div>
-                                    <p >{!!$service->description!!}</p>
+                                    {!! Str::limit(strip_tags($service->description), 100) !!}...
 
                                 </div><!-- single-post -->
                             </div><!-- col-sm-6 -->
@@ -126,7 +126,7 @@
                                     </div>
 
 {{--                                    <h3 class="title"><a href="#"><b class="light-color">How to paint the wall and street</b></a></h3>--}}
-                                    <p>{!!  $expertise->description !!}</p>
+                                    <p> {!! Str::limit(strip_tags($expertise->description), 100) !!} ...</p>
                                 </div><!-- single-post -->
                             </div><!-- col-sm-6 -->
                             @endforeach
@@ -243,7 +243,7 @@
                                         </div>
 
                                         {{--                                    <h3 class="title"><a href="#"><b class="light-color">How to paint the wall and street</b></a></h3>--}}
-                                        <p>{!!  $training->description !!}</p>
+                                        <p> {!! Str::limit(strip_tags($training->description), 100) !!} ...</p>
                                     </div><!-- single-post -->
                                 </div><!-- col-sm-6 -->
                             @endforeach

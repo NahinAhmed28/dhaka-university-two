@@ -33,7 +33,7 @@
                         </div>
                         <div class="card-body">
                             <h5 class="card-title"><a href="">{!!$training->title!!}</a></h5>
-                            <p class="card-text">{!!$training->description!!}</p>
+                            <p class="card-text"> {!! Str::limit(strip_tags($training->description), 100) !!}...</p>
                         </div>
                     </div>
                 </div>
