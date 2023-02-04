@@ -22,27 +22,29 @@
                 <div class="col-md-12">
                     <div class="blog-posts">
                         <div class="row">
-                            <div class="section-title col-md-12">
+                            <div class="section-title col-md-12 ">
                                 <h2>Expertises</h2>
-                                <p>Check our Expertises</p>
                             </div>
-                            @foreach ($expertises as $expertise)
-                                <div class="col-lg-4 col-md-4">
-                                    <div class="single-post">
+                            @foreach ($expertises as $i => $expertise)
+                                <div class="col-lg-4 col-md-4  ">
+                                    <button type="button" class="caegory-btn" data-toggle="modal" data-target="#serviceModal-{{$i}}">
+                                        <div class="single-post  border border-1">
                                         <div class="image-wrapper"><img src="{{ asset('assets/uploads/expertise/'.$expertise->image)}}" alt="Blog Image"></div>
 
-                                        <div class="icons">
-                                            <div class="left-area">
-                                                <a class=" caegory-btn" href="#"><b> {!!$expertise->title!!}</b></a>
+                                            <div class="icons">
+                                                <div class="left-area">
+                                                    <a class=" caegory-btn" href="#"><b> {!!$expertise->title!!}</b></a>
+                                                </div>
                                             </div>
 
-                                        </div>
-
                                         {{--                                    <h3 class="title"><a href="#"><b class="light-color">How to paint the wall and street</b></a></h3>--}}
-                                        <p> {!! Str::limit(strip_tags($expertise->description), 100) !!} ...</p>
-                                        <a class=" read-more-btn"  href="#"><b>READ MORE</b></a>
-                                    </div><!-- single-post -->
+                                            <p> {!! Str::limit(strip_tags($expertise->description), 100) !!} ...</p>
+
+                                        </div><!-- single-post -->
+                                    </button>
+
                                 </div><!-- col-sm-6 -->
+
                             @endforeach
 
 

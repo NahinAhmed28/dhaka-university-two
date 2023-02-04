@@ -89,20 +89,33 @@
                                 <h2>Services</h2>
 
                             </div>
-                            @foreach ($services as $service)
-                            <div class="col-md-6 border " >
-                                <div class="single-post " >
-                                    <div class="image-wrapper"><img src="{{ asset('assets/uploads/service/'.$service->image)}}" alt="Blog Image"></div>
+                            @foreach ($services as $i => $service)
+                                <div class="col-md-6 border " >
+                                    <div class="single-post " >
+                                        <button type="button" class="caegory-btn" data-toggle="modal" data-target="#serviceModal-{{$i}}">
+                                            <div class="image-wrapper"><img src="{{ asset('assets/uploads/service/'.$service->image)}}" alt="Blog Image"></div>
 
-                                    <div class="icons">
-                                        <div class="text-center">
-                                            <a class=" caegory-btn " href=""><b>{!!$service->title!!}</b></a>
-                                        </div>
-                                    </div>
-                                 <p>   {!! Str::limit(strip_tags($service->description), 100) !!}... </p>
-                                    <a class=" read-more-btn"  href="#"><b>READ MORE</b></a>
-                                </div><!-- single-post -->
-                            </div><!-- col-sm-6 -->
+                                            <div class="icons">
+                                                <div class="text-center">
+                                                    <a class=" caegory-btn " href=""><b>{!!$service->title!!}</b></a>
+                                                </div>
+                                            </div>
+
+                                            <p>   {!! Str::limit(strip_tags($service->description), 100) !!}... </p>
+
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="serviceModal-{{$i}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-lg" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-body">
+                                                            <!-- Add your image here -->
+                                                            <p>   {!! $service->description !!}... </p>                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div><!-- single-post -->
+                                </div><!-- col-sm-6 -->
                             @endforeach
 
                             <a class="btn btn-bg mb-4 mx-auto" href="#"><b>View MORE</b></a>
@@ -113,23 +126,26 @@
                                 <h2>Expertises</h2>
 
                             </div>
-                            @foreach ($expertises as $expertise)
-                            <div class="col-lg-4 col-md-4">
-                                <div class="single-post">
-                                    <div class="image-wrapper"><img src="{{ asset('assets/uploads/expertise/'.$expertise->image)}}" alt="Blog Image"></div>
+                            @foreach ($expertises as $i => $expertise)
+                                <div class="col-lg-4 col-md-4  ">
+                                    <button type="button" class="caegory-btn" data-toggle="modal" data-target="#serviceModal-{{$i}}">
+                                        <div class="single-post  border border-1">
+                                            <div class="image-wrapper"><img src="{{ asset('assets/uploads/expertise/'.$expertise->image)}}" alt="Blog Image"></div>
 
-                                    <div class="icons">
-                                        <div class="left-area">
-                                            <a class=" caegory-btn" href="#"><b> {!!$expertise->title!!}</b></a>
-                                        </div>
+                                            <div class="icons">
+                                                <div class="left-area">
+                                                    <a class=" caegory-btn" href="#"><b> {!!$expertise->title!!}</b></a>
+                                                </div>
+                                            </div>
 
-                                    </div>
+                                            {{--                                    <h3 class="title"><a href="#"><b class="light-color">How to paint the wall and street</b></a></h3>--}}
+                                            <p> {!! Str::limit(strip_tags($expertise->description), 100) !!} ...</p>
 
-{{--                                    <h3 class="title"><a href="#"><b class="light-color">How to paint the wall and street</b></a></h3>--}}
-                                    <p> {!! Str::limit(strip_tags($expertise->description), 100) !!} ...</p>
-                                    <a class=" read-more-btn"  href="#"><b>READ MORE</b></a>
-                                </div><!-- single-post -->
-                            </div><!-- col-sm-6 -->
+                                        </div><!-- single-post -->
+                                    </button>
+
+                                </div><!-- col-sm-6 -->
+
                             @endforeach
                             <a class="btn btn-bg mb-4 mx-auto" href="#"><b>View MORE</b></a>
                         </div><!-- row -->
@@ -228,9 +244,11 @@
                             <div class="section-title col-md-12">
                                 <h2>Trainings</h2>
                             </div>
-                            @foreach ($trainings as $training)
+                            @foreach ($trainings as $i => $training)
                                 <div class="col-lg-4 col-md-4">
+
                                     <div class="single-post">
+                                        <button type="button" class="caegory-btn" data-toggle="modal" data-target="#serviceModal-{{$i}}">
                                         <div class="image-wrapper"><img src="{{ asset('assets/uploads/training/'.$training->image)}}" alt="Blog Image"></div>
 
                                         <div class="icons">
@@ -242,8 +260,20 @@
 
                                         {{--                                    <h3 class="title"><a href="#"><b class="light-color">How to paint the wall and street</b></a></h3>--}}
                                         <p> {!! Str::limit(strip_tags($training->description), 100) !!} ...</p>
-                                        <a class=" read-more-btn"  href="#"><b>READ MORE</b></a>
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="serviceModal-{{$i}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-lg" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-body">
+                                                            <!-- Add your image here -->
+                                                            <p>   {!! $training->description !!}... </p>                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        </button>
                                     </div><!-- single-post -->
+
                                 </div><!-- col-sm-6 -->
                             @endforeach
 
