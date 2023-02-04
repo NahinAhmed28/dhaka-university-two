@@ -11,7 +11,7 @@
         @include('admin.layouts.common.header')
 
         <div class="app-main" >
-            <div class="app-sidebar sidebar-shadow" >
+            <div class="app-sidebar sidebar-shadow" style="overflow-y: auto">
                 @include('admin.layouts.common.sidebar')
             </div>
             <div class="app-main__outer">
