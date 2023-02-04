@@ -32,6 +32,7 @@
                                                 </div>
                                             </div>
                                                 <p>   {!! Str::limit(strip_tags($service->description), 100) !!}... </p>
+                                        </button>
                                             <!-- Modal -->
                                             <div class="modal fade" id="serviceModal-{{$i}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog modal-lg" role="document">
@@ -42,7 +43,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </button>
+
                                     </div><!-- single-post -->
                                 </div><!-- col-sm-6 -->
                             @endforeach
