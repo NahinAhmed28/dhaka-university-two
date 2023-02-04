@@ -38,36 +38,63 @@
                             </div>
                             <div class="col-lg-4 col-md-4">
                                 <div class="single-post">
-                                    <div class="image-wrapper">
-                                        <img src="{{ asset('assets/uploads/mission/'.$mission->image) }}" class="card-img-top"></div>
+                                    <button type="button" class="caegory-btn" data-toggle="modal" data-target="#missionModal">
+                                        <div class="image-wrapper">
+                                            <img src="{{ asset('assets/uploads/mission/'.$mission->image) }}" class="card-img-top">
+                                        </div>
+                                        <div class="icons">
+                                            <div class="left-area">
+                                                <a class=" caegory-btn" href="#"><b>Mission</b></a>
+                                            </div>
+                                        </div>
 
-                                    <div class="icons">
-                                        <div class="left-area">
-                                            <a class=" caegory-btn" href="#"><b>Mission</b></a>
+
+                                            <p > {!! Str::limit(strip_tags($mission->description), 100) !!} ...</p>
+                                    </button>
+
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="missionModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-body">
+                                                    <!-- Add your image here -->
+                                                    <p>   {!! $mission->description !!}... </p>                                                    </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <p> {!! Str::limit(strip_tags($mission->description), 100) !!} ...</p>
-                                    <a class="read-more-btn" href="#"><b>READ MORE</b></a>
                                 </div><!-- single-post -->
                             </div><!-- col-sm-6 -->
 
                             <div class="col-lg-4 col-md-">
                                 <div class="single-post">
-                                    <div class="image-wrapper">
-                                        <img src="{{  asset('assets/uploads/plan/'.$plan->image) }}" class="card-img-top"></div>
+                                    <button type="button" class="caegory-btn" data-toggle="modal" data-target="#planModal">
+                                        <div class="image-wrapper">
+                                            <img src="{{  asset('assets/uploads/plan/'.$plan->image) }}" class="card-img-top"></div>
 
-                                    <div class="icons">
-                                        <div class="left-area">
-                                            <a class=" caegory-btn" href="#"><b>Plan</b></a>
+                                        <div class="icons">
+                                            <div class="left-area">
+                                                <a class=" caegory-btn" href="#"><b>Plan</b></a>
+                                            </div>
+                                        </div>
+                                        <p> {!! Str::limit(strip_tags($plan->description), 100) !!}...</p>
+                                    </button>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="planModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-body">
+                                                    <!-- Add your image here -->
+                                                    <p>   {!! $plan->description !!}... </p>                                                    </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <p> {!! Str::limit(strip_tags($plan->description), 100) !!}...</p>
-                                    <a class=" read-more-btn"  href="#"><b>READ MORE</b></a>
                                 </div><!-- single-post -->
                             </div><!-- col-sm-6 -->
 
                             <div class="col-lg-4 col-md-4">
                                 <div class="single-post">
+                                    <button type="button" class="caegory-btn" data-toggle="modal" data-target="#vissionModal">
                                     <div class="image-wrapper">
                                         <img src="{{asset('assets/uploads/vision/'.$vision->image) }}" class="card-img-top"></div>
 
@@ -77,7 +104,18 @@
                                         </div>
                                     </div>
                                     <p> {!! Str::limit(strip_tags($vision->description), 100) !!} ...</p>
-                                    <a class=" read-more-btn" href="#"><b>READ MORE</b></a>
+                                    </button>
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="vissionModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-body">
+                                                    <!-- Add your image here -->
+                                                    <p>   {!! $vision->description !!}... </p>                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div><!-- single-post -->
                             </div><!-- col-sm-6 -->
 

@@ -31,9 +31,7 @@
                                                     <a class=" caegory-btn " href=""><b>{!!$service->title!!}</b></a>
                                                 </div>
                                             </div>
-
                                                 <p>   {!! Str::limit(strip_tags($service->description), 100) !!}... </p>
-
                                             <!-- Modal -->
                                             <div class="modal fade" id="serviceModal-{{$i}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog modal-lg" role="document">
