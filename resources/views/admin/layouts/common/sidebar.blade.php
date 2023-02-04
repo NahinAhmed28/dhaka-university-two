@@ -368,6 +368,29 @@
                         </li>
                     </ul>
                 </li>
+                {{--Advisors--}}
+                <li>
+                    <a href="#">
+                        <i class="metismenu-icon pe-7s-users"></i>
+                        Organization Advisors
+                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="{{route('advisor.create')}}">
+                                <i class="metismenu-icon">
+                                </i>Create
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{route('advisor.index')}}">
+                                <i class="metismenu-icon">
+                                </i>List
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
                 {{--Members--}}
                 <li>
                     <a href="#">

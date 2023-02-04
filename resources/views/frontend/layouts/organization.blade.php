@@ -44,6 +44,53 @@
 
                         </div><!-- row -->
 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Testimonials Section -->
+    <section class="section blog-area">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12">
+                    <div class="blog-posts">
+                        <div class="row">
+                            <div class="section-title col-md-12">
+                                <h2>Our Advisors</h2>
+
+                            </div>
+
+                            @foreach ($advisors as $advisor)
+                                <div class="col-md-3">
+                                    <div class="single-post">
+                                        <div class="image-wrapper"><img src="{{asset('assets/uploads/advisor/'. $advisor->image)}}" alt="Blog Image"></div>
+
+                                        <div class="icons">
+                                            <div class="left-area">
+                                                <a class="btn caegory-btn" href="#"><b>{{$advisor->name}}</b></a>
+                                            </div>
+                                        </div>
+                                        <div  style=" font-style: italic !important;">
+                                            <p>{!! $advisor->designation !!}</p>
+                                        </div>
+                                        <a class="btn read-more-btn" href="#"><b>READ MORE</b></a>
+                                    </div><!-- single-post -->
+                                </div><!-- col-sm-6 -->
+                            @endforeach
+
+                        </div><!-- row -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section blog-area">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12">
+                    <div class="blog-posts">
                         <div class="row">
                             <div class="section-title col-md-12">
                                 <h2>Our Researchers</h2>
@@ -69,13 +116,11 @@
                             @endforeach
 
                         </div><!-- row -->
-
                     </div>
                 </div>
             </div>
         </div>
-    </section><!-- End Testimonials Section -->
-
+    </section>
     <!-- ======= Clients Section ======= -->
     <section id="organization" class="clients">
         <div class="container" data-aos="zoom-in">

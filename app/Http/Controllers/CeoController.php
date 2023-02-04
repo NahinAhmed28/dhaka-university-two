@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Intervention\Image\Facades\Image;
 use RealRashid\SweetAlert\Facades\Alert;
 use App\Models\Ceo;
 use Illuminate\Http\Request;
@@ -76,16 +77,33 @@ class CeoController extends Controller
     {
 //        dd($request->all());
 
-        $request->validate([
-            'description' => 'required',
-            'video' => 'required',
-        ]);
+        $ceoImageFileName = $ceo->image;
+        if ($request->hasFile('image')){
+            $ceoImage = $request->file('image');
+            $ceoImageFileName = 'ceo'.time() . '.' . $ceoImage->getClientOriginalExtension();
 
-         $ceo->update([
-            'description' => $request->description,
-            'video' => $request->video,
-        ]);
 
+            if (!file_exists('assets/uploads/ceo')){
+                mkdir('assets/uploads/ceo', 0777, true);
+            }
+
+            //delete old image if exist
+
+
+            if (file_exists('assets/uploads/ceo/'.$ceo->image) and $ceo->image != 'default.png'){
+                unlink('assets/uploads/ceo/'.$ceo->image);
+            }
+            $ceoImage->move('assets/uploads/ceo', $ceoImageFileName);
+            Image::make('assets/uploads/ceo/'.$ceoImageFileName)->resize(500,400)->save('assets/uploads/ceo/'.$ceoImageFileName);
+        }
+
+        $ceo->update([
+            'name' => $request->name,
+            'designation' => $request->designation,
+            'message' => $request->message,
+            'image' => $ceoImageFileName,
+
+        ]);
         $data = [
             'ceo' => Ceo::first(),
         ];

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\About;
+use App\Models\Advisor;
 use App\Models\CompletedResearch;
 use App\Models\Contact;
 use App\Models\Expert;
@@ -143,9 +144,10 @@ class FrontEndController extends Controller
     {
         $data = [
             'organizations' => Organization::get(['image']),
-            'members' => Member::get(),
+            'members' => Member::orderBy('id', 'DESC')->get(),
+            'advisors' => Advisor::orderBy('id', 'DESC')->get(),
             'ceo' => Ceo::first(),
-            'experts' => Expert::get(),
+            'experts' => Expert::orderBy('id', 'DESC')->get(),
         ];
 
         return view('frontend.layouts.organization', $data);
