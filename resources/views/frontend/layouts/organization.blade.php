@@ -22,7 +22,31 @@
                     <div class="blog-posts">
                         <div class="row">
                             <div class="section-title col-md-12">
-                                <h2>Our Team</h2>
+                                <h2>Our CEO</h2>
+
+                            </div>
+                                <div class="col-md-3">
+                                    <div class="single-post">
+                                        <div class="image-wrapper"><img src="{{asset('assets/uploads/ceo/'. $ceo->image)}}" alt="Blog Image"></div>
+
+                                        <div class="icons">
+                                            <div class="left-area">
+                                                <a class="btn caegory-btn" href="#"><b>{{$ceo->name}}</b></a>
+                                            </div>
+                                        </div>
+                                        <div  style=" font-style: italic !important;">
+                                            <p>{!! $ceo->designation !!}</p>
+                                        </div>
+                                        <a class="btn read-more-btn" href="#"><b>READ MORE</b></a>
+                                    </div><!-- single-post -->
+                                </div><!-- col-sm-6 -->
+
+
+                        </div><!-- row -->
+
+                        <div class="row">
+                            <div class="section-title col-md-12">
+                                <h2>Our Researchers</h2>
 
                             </div>
 
@@ -56,7 +80,7 @@
     <section id="organization" class="clients">
         <div class="container" data-aos="zoom-in">
             <div class="section-title">
-                <h2>Partners</h2>
+                <h2>Associate Organizations</h2>
             </div>
             <div class="row">
 

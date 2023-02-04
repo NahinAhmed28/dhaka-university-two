@@ -22,6 +22,7 @@ use App\Models\Service;
 use App\Models\Training;
 use App\Models\Vision;
 use App\Models\Member;
+use App\Models\Ceo;
 
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -144,6 +145,7 @@ class FrontEndController extends Controller
         $data = [
             'organizations' => Organization::get(['image']),
             'members' => Member::get(),
+            'ceo' => Ceo::first(),
             'experts' => Expert::get(),
         ];
 

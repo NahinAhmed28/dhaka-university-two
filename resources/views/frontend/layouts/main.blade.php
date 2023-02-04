@@ -204,18 +204,25 @@
 
                         </div><!-- row -->
 
-                        <div class="row mt-2">
-                            <div class="section-title col-md-12">
-                                <h2>Associate Organizations</h2>
-                            </div>
-                            @foreach($organizations as $organization)
-                                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                                    <img src="{{ asset('assets/uploads/organization/'.$organization->image)}}" class="img-fluid" alt="">
+                        <!-- ======= Clients Section ======= -->
+                        <section id="organization" class="clients">
+                            <div class="container" data-aos="zoom-in">
+                                <div class="section-title">
+                                    <h2>Associate Organizations</h2>
                                 </div>
-                            @endforeach
+                                <div class="row">
+
+                                    @foreach($organizations as $organization)
+                                        <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                                            <img src="{{ asset('assets/uploads/organization/'.$organization->image)}}" class="img-fluid" alt="">
+                                        </div>
+                                    @endforeach
 
 
-                        </div><!-- row -->
+                                </div>
+
+                            </div>
+                        </section><!-- End Clients Section -->
 
 {{--                        <a class="btn load-more-btn" target="_blank" href="#">LOAD OLDER POSTS</a>--}}
 

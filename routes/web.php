@@ -21,6 +21,7 @@ use App\Http\Controllers\HeroController;
 use App\Http\Controllers\PlanController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\ExpertController;
+use App\Http\Controllers\CeoController;
 
 
 use Illuminate\Support\Facades\Artisan;
@@ -66,6 +67,7 @@ Route::resource('hero', HeroController::class);
 Route::resource('plan', PlanController::class);
 Route::resource('member', MemberController::class);
 Route::resource('expert', ExpertController::class);
+Route::resource('ceo', CeoController::class);
 });
 
 Route::get('/', [App\Http\Controllers\FrontEndController::class, 'index'])->name('front');
