@@ -46,7 +46,7 @@
                 </ul>
             </li>
 {{--            <li><a href="{{asset('frontend/04-Contact.html')}}">CONTACT</a></li>--}}
-            <li><a href="{{asset('frontend/04-Contact.html')}}">CONTACT</a></li>
+            <li><a href="{{route('front.contact')}}">CONTACT</a></li>
             <li><a href="{{route('login')}}">Login</a></li>
         </ul><!-- main-menu -->
 

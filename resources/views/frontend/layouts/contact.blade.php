@@ -15,22 +15,21 @@
 
 
         <!-- ======= Contact Section ======= -->
-        <section id="contact" class="contact">
+        <section id="contact" class="contact my-5">
             <div class="container" data-aos="fade-up">
 
                 <div class=" section-title">
                     <h2>Contact</h2>
-                    <p>Contact Us</p>
                 </div>
 
-                <div class="row">
+                <div class="row ">
                     <div class="col-lg-6">
-                        <div class="row">
+                        <div class="row ">
                             <div class="col-12">
                                 <div class="info-box">
                                     <i class="bx bx-map"></i>
-                                    <h3>Our Address</h3>
-                                    <p class="pb-2">Room: 9050-52, 8th Floor, MBA Building <br>
+                                    <h3 class="fw-bold">Our Address</h3>
+                                    <p class="pb-2 font-italic">Room: 9050-52, 8th Floor, MBA Building <br>
                                         Faculty of Business Studies <br>
                                         <strong>University of Dhaka</strong>  </p>
                                 </div>
@@ -40,7 +39,7 @@
                     </div>
 
                     <div class="col-lg-6 mt-4 mt-lg-0">
-                        <form action="{{route('public.contactStore')}}" method="post" role="form" >
+                        <form action="{{route('front.contactStore')}}" method="post" role="form" >
                             @csrf
                             <div class="row">
                                 <div class="col-md-6 form-group">
@@ -66,7 +65,7 @@
                             </div>
                             @include('sweetalert::alert')
                             <div class="my-3">
-                                <div class="text-center"><button type="submit" class="btn btn-warning">Send Message</button></div>
+                                <div class="text-center"><button type="submit" class="btn btn-primary">Send Message</button></div>
                             </div>
                         </form>
                     </div>
