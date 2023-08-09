@@ -223,38 +223,38 @@
                         </div><!-- row -->
 
 
-                        <div class="row">
-                            <div class="section-title col-md-12">
-                                <h2>Portfolio</h2>
+{{--                        <div class="row">--}}
+{{--                            <div class="section-title col-md-12">--}}
+{{--                                <h2>Portfolio</h2>--}}
 
-                            </div>
-                            @foreach($portfolios as $index => $portfolio)
-                                <div class="col-lg-4 col-md-6">
-                                    <!-- Add a button to trigger the modal -->
-                                    <div class="single-post">
-                                        <div class="image-wrapper">
+{{--                            </div>--}}
+{{--                            @foreach($portfolios as $index => $portfolio)--}}
+{{--                                <div class="col-lg-4 col-md-6">--}}
+{{--                                    <!-- Add a button to trigger the modal -->--}}
+{{--                                    <div class="single-post">--}}
+{{--                                        <div class="image-wrapper">--}}
 
-                                            <button type="button" class="btn btn-primary p-0" data-toggle="modal" data-target="#portfolioModal-{{$index}}">
-                                                <img src="{{asset('assets/uploads/portfolio/'.$portfolio->image)}}" alt="Blog Image">
-                                            </button>
-                                        </div>
+{{--                                            <button type="button" class="btn btn-primary p-0" data-toggle="modal" data-target="#portfolioModal-{{$index}}">--}}
+{{--                                                <img src="{{asset('assets/uploads/portfolio/'.$portfolio->image)}}" alt="Blog Image">--}}
+{{--                                            </button>--}}
+{{--                                        </div>--}}
 
-                                    </div>
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="portfolioModal-{{$index}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-lg" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-body">
-                                                    <!-- Add your image here -->
-                                                    <img src="{{asset('assets/uploads/portfolio/'.$portfolio->image)}}" class="img-fluid" alt="your-image-description">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            @endforeach
-                            <a class="btn btn-bg mb-4 mx-auto" href="#"><b>View MORE</b></a>
-                        </div><!-- row -->
+{{--                                    </div>--}}
+{{--                                    <!-- Modal -->--}}
+{{--                                    <div class="modal fade" id="portfolioModal-{{$index}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">--}}
+{{--                                        <div class="modal-dialog modal-lg" role="document">--}}
+{{--                                            <div class="modal-content">--}}
+{{--                                                <div class="modal-body">--}}
+{{--                                                    <!-- Add your image here -->--}}
+{{--                                                    <img src="{{asset('assets/uploads/portfolio/'.$portfolio->image)}}" class="img-fluid" alt="your-image-description">--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            @endforeach--}}
+{{--                            <a class="btn btn-bg mb-4 mx-auto" href="#"><b>View MORE</b></a>--}}
+{{--                        </div><!-- row -->--}}
 
                         <!-- ======= Clients Section ======= -->
                         <section id="organization" class="clients">

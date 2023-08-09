@@ -87,6 +87,8 @@ Route::group(['prefix'=>'front','as'=>'front.'], function(){
     Route::get('/ongoing-research', [App\Http\Controllers\FrontEndController::class, 'ongoingResearch'])->name('ongoing-research');
     Route::get('/publication', [App\Http\Controllers\FrontEndController::class, 'publication'])->name('publication');
     Route::get('/organization', [App\Http\Controllers\FrontEndController::class, 'organization'])->name('organization');
+    Route::get('/advisor', [App\Http\Controllers\FrontEndController::class, 'advisor'])->name('advisor');
+    Route::get('/member', [App\Http\Controllers\FrontEndController::class, 'member'])->name('member');
     Route::get('/gallery', [App\Http\Controllers\FrontEndController::class, 'gallery'])->name('gallery');
     Route::get('/portfolio', [App\Http\Controllers\FrontEndController::class, 'portfolio'])->name('portfolio');
     Route::post('/contactStore', [App\Http\Controllers\FrontEndController::class, 'contactStore'])->name('contactStore');

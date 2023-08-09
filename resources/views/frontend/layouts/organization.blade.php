@@ -63,106 +63,25 @@
             </div>
         </div>
     </section><!-- End Testimonials Section -->
-    <section class="section blog-area">
+
+    <section class="section blog-area" style="padding-top: 0px">
         <div class="container">
             <div class="row">
 
-                <div class="col-md-12">
-                    <div class="blog-posts">
-                        <div class="row">
-                            <div class="section-title col-md-12">
-                                <h2>Our Advisors</h2>
-
-                            </div>
-
-                            @foreach ($advisors as  $i =>$advisor)
-                                <div class="col-md-3">
-                                    <div class="single-post">
-                                        <button type="button" class="caegory-btn" data-toggle="modal" data-target="#advisorModal-{{$i}}">
-
-                                            <div class="image-wrapper"><img src="{{asset('assets/uploads/advisor/'. $advisor->image)}}" alt="Blog Image"></div>
-
-                                            <div class="icons">
-                                                <div class="left-area">
-                                                    <a class="caegory-btn" href="#"><b>{{$advisor->name}}</b></a>
-                                                </div>
-                                            </div>
-                                            <div style=" font-style: italic !important;">
-
-                                                <p>{!! $advisor->designation !!}</p>
-                                            </div>
-                                        </button>
-                                        <div class="modal fade" id="advisorModal-{{$i}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog modal-lg" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-body">
-                                                        <!-- Add your image here -->
-                                                        <img class=h-50" src="{{asset('assets/uploads/advisor/'. $advisor->image)}}" alt="Blog Image">
-                                                        <p>   {!! $advisor->message !!} </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div><!-- single-post -->
-                                </div><!-- col-sm-6 -->
-                            @endforeach
-
-                        </div><!-- row -->
-                    </div>
+                <div class="col-md-12 text-center">
+                    <a class="" href="{{route('front.advisor')}}" style="padding: 15px;border: 1px solid orangered;margin: 5px"><b>See Our Advisors</b></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <a class="" style="padding: 15px;border: 1px solid orangered;margin: 5px" href="{{route('front.member')}}"><b> See Our Researchers</b></a>
                 </div>
             </div>
         </div>
     </section>
-    <section class="section blog-area">
-        <div class="container">
-            <div class="row">
 
-                <div class="col-md-12">
-                    <div class="blog-posts">
-                        <div class="row">
-                            <div class="section-title col-md-12">
-                                <h2>Our Researchers</h2>
 
-                            </div>
 
-                            @foreach ($members as  $i =>$member)
-                                <div class="col-md-3">
-                                    <div class="single-post">
-                                        <button type="button" class="caegory-btn" data-toggle="modal" data-target="#memberModal-{{$i}}">
-
-                                        <div class="image-wrapper"><img src="{{asset('assets/uploads/member/'. $member->image)}}" alt="Blog Image"></div>
-
-                                        <div class="icons">
-                                            <div class="left-area">
-                                                <a class="caegory-btn" href="#"><b>{{$member->name}}</b></a>
-                                            </div>
-                                        </div>
-                                        <div style=" font-style: italic !important;">
-
-                                            <p>{!! $member->designation !!}</p>
-                                        </div>
-                                        </button>
-                                        <div class="modal fade" id="memberModal-{{$i}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog modal-lg" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-body">
-                                                        <!-- Add your image here -->
-                                                       <img class=h-50" src="{{asset('assets/uploads/member/'. $member->image)}}" alt="Blog Image">
-                                                        <p>   {!! $member->message !!} </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div><!-- single-post -->
-                                </div><!-- col-sm-6 -->
-                            @endforeach
-
-                        </div><!-- row -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <!-- ======= Clients Section ======= -->
     <section id="organization" class="clients">
         <div class="container" data-aos="zoom-in">

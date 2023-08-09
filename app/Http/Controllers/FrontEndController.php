@@ -144,14 +144,30 @@ class FrontEndController extends Controller
     {
         $data = [
             'organizations' => Organization::get(['image']),
-            'members' => Member::orderBy('id', 'DESC')->get(),
-            'advisors' => Advisor::orderBy('id', 'DESC')->get(),
             'ceo' => Ceo::first(),
             'experts' => Expert::orderBy('id', 'DESC')->get(),
         ];
 
         return view('frontend.layouts.organization', $data);
     }
+
+    public function member()
+    {
+        $data = [
+            'members' => Member::orderBy('id', 'DESC')->get(),
+        ];
+
+        return view('frontend.layouts.researchers', $data);
+    }
+    public function advisor()
+    {
+        $data = [
+            'advisors' => Advisor::orderBy('id', 'DESC')->get(),
+        ];
+
+        return view('frontend.layouts.advisors', $data);
+    }
+
     public function publication()
     {
         $data = [

@@ -29,7 +29,8 @@
             <li class="drop-down"><a href="#!">Associate<i class="ion-ios-arrow-down"></i></a>
                 <ul class="drop-down-menu">
                     <li><a href="{{route('front.organization')}}">Organizations</a></li>
-                    <li><a href="{{route('front.organization')}}">Expert Opinions</a></li>
+                    <li><a href="{{route('front.advisor')}}">Advisors</a></li>
+                    <li><a href="{{route('front.member')}}">Researchers</a></li>
                 </ul>
             </li>
             <li class="drop-down"><a href="#!">Research<i class="ion-ios-arrow-down"></i></a>
@@ -42,7 +43,7 @@
             <li class="drop-down"><a href="#!">Gallery<i class="ion-ios-arrow-down"></i></a>
                 <ul class="drop-down-menu">
                     <li><a href="{{route('front.gallery')}}">Galleries</a></li>
-                    <li><a href="{{route('front.portfolio')}}">Portfolios</a></li>
+{{--                    <li><a href="{{route('front.portfolio')}}">Portfolios</a></li>--}}
                 </ul>
             </li>
 {{--            <li><a href="{{asset('frontend/04-Contact.html')}}">CONTACT</a></li>--}}

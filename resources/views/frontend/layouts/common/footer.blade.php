@@ -22,6 +22,11 @@
                 <div class="footer-section">
                     <h3>Useful Links</h3>
                     <ul style="list-style: none">
+                        <li style=" display: block;"><i class="bx bx-chevron-right"></i> <a href="https://dataquest360.com/" target="_blank">DataQuest 360 </a></li>
+                        <li style=" display: block;"><i class="bx bx-chevron-right"></i> <a href="https://a2i.gov.bd/" target="_blank">A2i</a></li>
+                        <li style=" display: block;"><i class="bx bx-chevron-right"></i> <a href="- http://www.banbeis.gov.bd/" target="_blank">BANBEIS</a></li>
+                        <li style=" display: block;"><i class="bx bx-chevron-right"></i> <a href="http://www.bteb.gov.bd/" target="_blank">BTEB </a></li>
+                        <li style=" display: block;"><i class="bx bx-chevron-right"></i> <a href="http://www.bbs.gov.bd/Home.aspx" target="_blank">BBS</a></li>
                         <li style=" display: block;"><i class="bx bx-chevron-right"></i> <a href="https://www.du.ac.bd/" target="_blank">Dhaka University</a></li>
                         <li style=" display: block;"><i class="bx bx-chevron-right"></i> <a href="https://bangladesh.gov.bd" target="_blank">Bangladesh Government</a></li>
                         <li style=" display: block;"><i class="bx bx-chevron-right"></i> <a href="http://www.bbs.gov.bd/" target="_blank">Bangladesh National Portal</a></li>
