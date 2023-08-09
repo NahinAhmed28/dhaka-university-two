@@ -35,6 +35,7 @@ class FrontEndController extends Controller
     {
         $data = [
             'about' => About::first(),
+            'ceo' => Ceo::first(),
             'organizations' => Organization::get(['image']),
             'services' => Service::take(4)->get(),
             'mission' => Mission::first(),
@@ -57,6 +58,7 @@ class FrontEndController extends Controller
     public function about()
     {
         $data = [
+            'ceo' => Ceo::first(),
             'about' => About::first(),
             'mission' => Mission::first(),
             'vision' => Vision::first(),

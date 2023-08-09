@@ -11,10 +11,8 @@
     <section class="section blog-area">
         <div class="container">
             <div class="row">
-
                 <div class="col-md-12">
                     <div class="blog-posts">
-
                         <div class="single-post" id="about">
                             <div class="col-md-12 video-box align-self-baseline" data-aos="zoom-in" data-aos-delay="100">
                                 <div class="section-title">
@@ -188,9 +186,6 @@
                             <a class="btn btn-bg mb-4 mx-auto" href="#"><b>View MORE</b></a>
                         </div><!-- row -->
 
-
-
-
                         <div class="row ">
                             <div class="section-title col-md-12">
                                 <h2>Gallery</h2>
@@ -278,6 +273,44 @@
 
 {{--                        <a class="btn load-more-btn" target="_blank" href="#">LOAD OLDER POSTS</a>--}}
 
+                        <div class="row">
+
+                            <div class="col-md-12">
+                                <div class="blog-posts">
+                                    <div class="row">
+                                        <div class="section-title col-md-12 text-center">
+                                            <h2>Our CEO</h2>
+                                        </div>
+                                        <div class="col-md-3 mx-auto">
+                                            <div class="single-post">
+                                                <button type="button" class="caegory-btn" data-toggle="modal" data-target="#ceoModal">
+                                                    <div class="image-wrapper"><img src="{{asset('assets/uploads/ceo/'. $ceo->image)}}" alt="Blog Image"></div>
+
+                                                    <div class="icons">
+                                                        <div class="left-area">
+                                                            <a class=" caegory-btn" href="#"><b>{{$ceo->name}}</b></a>
+                                                        </div>
+                                                    </div>
+                                                    <div style="font-style: italic !important;">
+                                                        <p >{!! $ceo->designation !!}</p>
+                                                    </div>
+                                                </button>
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="ceoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog modal-lg" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-body">
+                                                                <!-- Add your image here -->
+                                                                <img src="{{asset('assets/uploads/ceo/'. $ceo->image)}}" alt="Blog Image">
+                                                                <p>   {!! $ceo->message !!} </p>                                                    </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div><!-- single-post -->
+                                            {{--                                        <a class=" read-more-btn" href="#"><b> MORE</b></a>--}}
+                                        </div><!-- single-post -->
+                                    </div><!-- col-sm-6 -->
+                                </div><!-- row -->
                         <div class="row pt-4">
                             <div class="section-title col-md-12">
                                 <h2>Trainings</h2>
@@ -317,6 +350,7 @@
 
 
                         </div><!-- row -->
+
 
                         </div><!-- blog-posts -->
                     </div>
