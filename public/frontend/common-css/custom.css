@@ -22,14 +22,14 @@
     }
 }
 
-.section-title h2::after {
-    content: "" !important;
-    width: 60px !important;
-    height: 10px !important;
-    display: inline-block !important;
-    background: #5dad2e !important;
-    margin: 4px 10px !important;
-}
+/*.section-title h2::after {*/
+/*    content: "" !important;*/
+/*    width: 60px !important;*/
+/*    height: 10px !important;*/
+/*    display: inline-block !important;*/
+/*    background: #5dad2e !important;*/
+/*    margin: 4px 10px !important;*/
+/*}*/
 .section-title p {
     margin: 0;
     font-size: 20px;

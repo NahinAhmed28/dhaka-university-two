@@ -254,8 +254,8 @@
                         <!-- ======= Clients Section ======= -->
                         <section id="organization " class="clients" data-aos="zoom-out">
                             <div class="container" data-aos="zoom-in">
-                                <div class="section-title">
-                                    <h2>Associate Organizations</h2>
+                                <div class="section-title" data-aos="zoom-out">
+                                    <h3>Associate Organizations</h3>
                                 </div>
                                 <div class="row bg-beige">
 
@@ -316,7 +316,7 @@
                                 <h2>Trainings</h2>
                             </div>
                             @foreach ($trainings as $i => $training)
-                                <div class="col-lg-4 col-md-4">
+                                <div class="col-lg-4 col-md-4" data-aos="zoom-in">
 
                                     <div class="single-post">
                                         <button type="button" class="caegory-btn" data-toggle="modal" data-target="#serviceModal-{{$i}}">
@@ -357,6 +357,7 @@
                 </div><!-- col-lg-4 -->
             </div><!-- row -->
         </div><!-- container -->
+        </div>
     </section><!-- section -->
 
 
