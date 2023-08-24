@@ -24,7 +24,7 @@
 
     <link href="{{asset('frontend/01-homepage/css/responsive.css')}}" rel="stylesheet">
 
-
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 
 </head>

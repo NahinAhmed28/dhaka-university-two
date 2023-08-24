@@ -35,7 +35,7 @@
 
                             </div>
                             <div class="col-lg-4 col-md-4">
-                                <div class="single-post">
+                                <div class="single-post"  data-aos="flip-left">
                                     <button type="button" class="caegory-btn" data-toggle="modal" data-target="#missionModal">
                                         <div class="image-wrapper">
                                             <img src="{{ asset('assets/uploads/mission/'.$mission->image) }}" class="card-img-top">
@@ -65,7 +65,7 @@
                             </div><!-- col-sm-6 -->
 
                             <div class="col-lg-4 col-md-">
-                                <div class="single-post">
+                                <div class="single-post"  data-aos="flip-up">
                                     <button type="button" class="caegory-btn" data-toggle="modal" data-target="#planModal">
                                         <div class="image-wrapper">
                                             <img src="{{  asset('assets/uploads/plan/'.$plan->image) }}" class="card-img-top"></div>
@@ -91,7 +91,7 @@
                             </div><!-- col-sm-6 -->
 
                             <div class="col-lg-4 col-md-4">
-                                <div class="single-post">
+                                <div class="single-post"  data-aos="flip-right">
                                     <button type="button" class="caegory-btn" data-toggle="modal" data-target="#vissionModal">
                                     <div class="image-wrapper">
                                         <img src="{{asset('assets/uploads/vision/'.$vision->image) }}" class="card-img-top"></div>
@@ -120,7 +120,7 @@
                             <a class="btn btn-bg mb-4 mx-auto" target="_blank" href="{{route('front.about')}}"><b>View MORE</b></a>
                         </div><!-- row -->
 
-                        <div class="row">
+                        <div class="row bg-beige" data-aos="flip-up">
                             <div class="section-title col-md-12">
                                 <h2>Services</h2>
 
@@ -157,7 +157,7 @@
                             <a class="btn btn-bg mb-4 mx-auto" href="#"><b>View MORE</b></a>
                         </div><!-- row -->
 
-                        <div class="row">
+                        <div class="row" data-aos="fade-up">
                             <div class="section-title col-md-12">
                                 <h2>Expertises</h2>
 
@@ -186,7 +186,7 @@
                             <a class="btn btn-bg mb-4 mx-auto" href="#"><b>View MORE</b></a>
                         </div><!-- row -->
 
-                        <div class="row ">
+                        <div class="row"  data-aos="fade-left">
                             <div class="section-title col-md-12">
                                 <h2>Gallery</h2>
                             </div>
@@ -252,12 +252,12 @@
 {{--                        </div><!-- row -->--}}
 
                         <!-- ======= Clients Section ======= -->
-                        <section id="organization" class="clients">
+                        <section id="organization " class="clients" data-aos="zoom-out">
                             <div class="container" data-aos="zoom-in">
                                 <div class="section-title">
                                     <h2>Associate Organizations</h2>
                                 </div>
-                                <div class="row">
+                                <div class="row bg-beige">
 
                                     @foreach($organizations as $organization)
                                         <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
@@ -273,13 +273,13 @@
 
 {{--                        <a class="btn load-more-btn" target="_blank" href="#">LOAD OLDER POSTS</a>--}}
 
-                        <div class="row">
+                        <div class="row" data-aos="fade-in" data-aos-id="super-duper">
 
                             <div class="col-md-12">
                                 <div class="blog-posts">
                                     <div class="row">
-                                        <div class="section-title col-md-12 text-center">
-                                            <h2>Our CEO</h2>
+                                        <div class="text-success font-weight-bold col-md-12 text-center">
+                                            <h3>Our CEO</h3>
                                         </div>
                                         <div class="col-md-3 mx-auto">
                                             <div class="single-post">

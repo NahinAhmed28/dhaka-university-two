@@ -24,6 +24,10 @@
 
 <script src="{{asset('frontend/common-js/scripts.js')}}"></script>
 
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 
 @stack('scripts')
 
