@@ -42,5 +42,12 @@
 
 
         </div><!-- row -->
+
+        <div class="row">
+            <div class="col-md-12 text-center">
+               <p class="text-success font-italic"> made with love and care by -  <a href="https://www.linkedin.com/in/ahmed-nur-a-jalal-b025341a5/">Nahin Ahmed</a></p>
+                <p class="font-italic text-primary">all rights received by icgsbd </p>
+            </div>
+        </div>
     </div><!-- container -->
 </footer>
