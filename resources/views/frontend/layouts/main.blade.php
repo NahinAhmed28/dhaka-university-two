@@ -36,13 +36,13 @@
                             </div>
                             <div class="col-lg-4 col-md-4">
                                 <div class="single-post"  data-aos="flip-left">
-                                    <button type="button" class="caegory-btn" data-toggle="modal" data-target="#missionModal">
+                                    <button type="button" class="category-btn" data-toggle="modal" data-target="#missionModal">
                                         <div class="image-wrapper">
                                             <img src="{{ asset('assets/uploads/mission/'.$mission->image) }}" class="card-img-top">
                                         </div>
                                         <div class="icons">
                                             <div class="left-area">
-                                                <a class=" caegory-btn" href="#"><b>Mission</b></a>
+                                                <a class=" category-btn" href="#"><b>Mission</b></a>
                                             </div>
                                         </div>
 
@@ -66,13 +66,13 @@
 
                             <div class="col-lg-4 col-md-">
                                 <div class="single-post"  data-aos="flip-up">
-                                    <button type="button" class="caegory-btn" data-toggle="modal" data-target="#planModal">
+                                    <button type="button" class="category-btn" data-toggle="modal" data-target="#planModal">
                                         <div class="image-wrapper">
                                             <img src="{{  asset('assets/uploads/plan/'.$plan->image) }}" class="card-img-top"></div>
 
                                         <div class="icons">
                                             <div class="left-area">
-                                                <a class=" caegory-btn" href="#"><b>Plan</b></a>
+                                                <a class=" category-btn" href="#"><b>Plan</b></a>
                                             </div>
                                         </div>
                                         <p> {!! Str::limit(strip_tags($plan->description), 100) !!}...</p>
@@ -92,13 +92,13 @@
 
                             <div class="col-lg-4 col-md-4">
                                 <div class="single-post"  data-aos="flip-right">
-                                    <button type="button" class="caegory-btn" data-toggle="modal" data-target="#vissionModal">
+                                    <button type="button" class="category-btn" data-toggle="modal" data-target="#vissionModal">
                                     <div class="image-wrapper">
                                         <img src="{{asset('assets/uploads/vision/'.$vision->image) }}" class="card-img-top"></div>
 
                                     <div class="icons">
                                         <div class="left-area">
-                                            <a class=" caegory-btn" href="#"><b>Vision</b></a>
+                                            <a class=" category-btn" href="#"><b>Vision</b></a>
                                         </div>
                                     </div>
                                     <p> {!! Str::limit(strip_tags($vision->description), 100) !!} ...</p>
@@ -128,12 +128,12 @@
                             @foreach ($services as $i => $service)
                                 <div class="col-md-6 border " >
                                     <div class="single-post " >
-                                        <button type="button" class="caegory-btn" data-toggle="modal" data-target="#serviceModal-{{$i}}">
+                                        <button type="button" class="category-btn" data-toggle="modal" data-target="#serviceModal-{{$i}}">
                                             <div class="image-wrapper"><img src="{{ asset('assets/uploads/service/'.$service->image)}}" alt="Blog Image"></div>
 
                                             <div class="icons">
                                                 <div class="text-center">
-                                                    <a class=" caegory-btn " href=""><b>{!!$service->title!!}</b></a>
+                                                    <a class=" category-btn " href=""><b>{!!$service->title!!}</b></a>
                                                 </div>
                                             </div>
 
@@ -164,13 +164,13 @@
                             </div>
                             @foreach ($expertises as $i => $expertise)
                                 <div class="col-lg-4 col-md-4  ">
-                                    <button type="button" class="caegory-btn" data-toggle="modal" data-target="#serviceModal-{{$i}}">
+                                    <button type="button" class="category-btn" data-toggle="modal" data-target="#serviceModal-{{$i}}">
                                         <div class="single-post  border border-1">
                                             <div class="image-wrapper"><img src="{{ asset('assets/uploads/expertise/'.$expertise->image)}}" alt="Blog Image"></div>
 
                                             <div class="icons">
                                                 <div class="left-area">
-                                                    <a class=" caegory-btn" href="#"><b> {!!$expertise->title!!}</b></a>
+                                                    <a class="category-btn" href="#"><b> {!!$expertise->title!!}</b></a>
                                                 </div>
                                             </div>
 
@@ -283,12 +283,12 @@
                                         </div>
                                         <div class="col-md-3 mx-auto">
                                             <div class="single-post">
-                                                <button type="button" class="caegory-btn" data-toggle="modal" data-target="#ceoModal">
+                                                <button type="button" class="category-btn" data-toggle="modal" data-target="#ceoModal">
                                                     <div class="image-wrapper"><img src="{{asset('assets/uploads/ceo/'. $ceo->image)}}" alt="Blog Image"></div>
 
                                                     <div class="icons">
                                                         <div class="left-area">
-                                                            <a class=" caegory-btn" href="#"><b>{{$ceo->name}}</b></a>
+                                                            <a class=" category-btn" href="#"><b>{{$ceo->name}}</b></a>
                                                         </div>
                                                     </div>
                                                     <div style="font-style: italic !important;">
@@ -319,12 +319,12 @@
                                 <div class="col-lg-4 col-md-4" data-aos="zoom-in">
 
                                     <div class="single-post">
-                                        <button type="button" class="caegory-btn" data-toggle="modal" data-target="#serviceModal-{{$i}}">
+                                        <button type="button" class="category-btn" data-toggle="modal" data-target="#serviceModal-{{$i}}">
                                         <div class="image-wrapper"><img src="{{ asset('assets/uploads/training/'.$training->image)}}" alt="Blog Image"></div>
 
                                         <div class="icons">
                                             <div class="left-area">
-                                                <a class=" caegory-btn" href="#"><b> {!!$training->title!!}</b></a>
+                                                <a class=" category-btn" href="#"><b> {!!$training->title!!}</b></a>
                                             </div>
 
                                         </div>

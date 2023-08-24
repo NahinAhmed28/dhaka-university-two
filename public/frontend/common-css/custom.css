@@ -115,3 +115,9 @@ li a:hover{
 .bg-beige{
     background: beige;
 }
+.category-btn{
+font-size: 20px !important;
+    font-family: "Arial Black" !important;
+    font-weight: bold !important;
+    color: #6f42c1 !important;
+}
