@@ -120,13 +120,13 @@
                             <a class="btn btn-bg mb-4 mx-auto" target="_blank" href="{{route('front.about')}}"><b>View MORE</b></a>
                         </div><!-- row -->
 
-                        <div class="row bg-beige" >
+                        <div class="row" >
                             <div class="section-title col-md-12">
                                 <h2>Services</h2>
 
                             </div>
                             @foreach ($services as $i => $service)
-                                <div class="col-md-6 border " >
+                                <div class="col-md-6 border bg-beige" >
                                     <div class="single-post " >
                                         <button type="button" class="category-btn" data-toggle="modal" data-target="#serviceModal-{{$i}}">
                                             <div class="image-wrapper" data-aos="flip-up"><img src="{{ asset('assets/uploads/service/'.$service->image)}}" alt="Blog Image"></div>
