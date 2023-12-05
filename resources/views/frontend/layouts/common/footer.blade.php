@@ -6,14 +6,11 @@
                 <div class="footer-section">
                     <h3> Samiul Hoque </h3>
                     <p class="text-white">
-                        Head of Administration <br>
-                        Center for Trade and Investment <br>
-                        University of Dhaka <br>
-                        Room: 9050-52, 8th Floor, MBA Building, <br>
-                        Faculty of Business Studies, <br>
-                        University of Dhaka<br>
+                        83, Kazi Nazrul Islam Avenue, <br>
+                        Ahmed Complex (1st Floor)  <br>
+                        Farmgate, Tejgaon, Dhaka-1215, Bangladesh  <br>
                         <strong>Email :</strong>  samiulhoque63@yahoo.com<br>
-                        <strong>Cell :</strong>  01717044316<br>
+                        <strong>Cell :</strong> 01717044316<br>
                     </p>                </div><!-- footer-section -->
             </div><!-- col-lg-4 col-md-6 -->
 
