@@ -28,6 +28,7 @@
                             </div>
                         </div><!-- single-post -->
 
+
                         <div class="row">
                             <div class="section-title col-md-12">
                                 <h2>Approaches</h2>
@@ -163,7 +164,7 @@
                             </div>
                             @foreach ($expertises as $i => $expertise)
                                 <div class="col-lg-4 col-md-4  ">
-                                    <button type="button" class="category-btn" data-toggle="modal" data-target="#expertiseModal-{{$i}}">
+                                    <button type="button" class="category-btn" data-toggle="modal" data-target="#serviceModal-{{$i}}">
                                         <div class="single-post  border border-1">
                                             <div class="image-wrapper" data-aos="fade-up"><img src="{{ asset('assets/uploads/expertise/'.$expertise->image)}}" alt="Blog Image"></div>
 
@@ -177,22 +178,12 @@
                                             <p> {!! Str::limit(strip_tags($expertise->description), 100) !!} ...</p>
 
                                         </div><!-- single-post -->
-                                        <!-- Modal -->
-                                        <div class="modal fade" id="expertiseModal-{{$i}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog modal-lg" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-body">
-                                                        <!-- Add your image here -->
-                                                        <p>   {!! $expertise->description !!}... </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </button>
 
                                 </div><!-- col-sm-6 -->
 
                             @endforeach
+                            <a class="btn btn-bg mb-4 mx-auto" href="#"><b>View MORE</b></a>
                         </div><!-- row -->
 
                         <div class="row"  >
@@ -226,103 +217,144 @@
                             <a class="btn btn-bg mb-4 mx-auto" href="{{route('front.gallery')}}"><b>View MORE</b></a>
                         </div><!-- row -->
 
-                        <div class="row" >
-                            <div class="section-title col-md-12">
-                                <h2>Trainings</h2>
+
+                        {{--                        <div class="row">--}}
+                        {{--                            <div class="section-title col-md-12">--}}
+                        {{--                                <h2>Portfolio</h2>--}}
+
+                        {{--                            </div>--}}
+                        {{--                            @foreach($portfolios as $index => $portfolio)--}}
+                        {{--                                <div class="col-lg-4 col-md-6">--}}
+                        {{--                                    <!-- Add a button to trigger the modal -->--}}
+                        {{--                                    <div class="single-post">--}}
+                        {{--                                        <div class="image-wrapper">--}}
+
+                        {{--                                            <button type="button" class="btn btn-primary p-0" data-toggle="modal" data-target="#portfolioModal-{{$index}}">--}}
+                        {{--                                                <img src="{{asset('assets/uploads/portfolio/'.$portfolio->image)}}" alt="Blog Image">--}}
+                        {{--                                            </button>--}}
+                        {{--                                        </div>--}}
+
+                        {{--                                    </div>--}}
+                        {{--                                    <!-- Modal -->--}}
+                        {{--                                    <div class="modal fade" id="portfolioModal-{{$index}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">--}}
+                        {{--                                        <div class="modal-dialog modal-lg" role="document">--}}
+                        {{--                                            <div class="modal-content">--}}
+                        {{--                                                <div class="modal-body">--}}
+                        {{--                                                    <!-- Add your image here -->--}}
+                        {{--                                                    <img src="{{asset('assets/uploads/portfolio/'.$portfolio->image)}}" class="img-fluid" alt="your-image-description">--}}
+                        {{--                                                </div>--}}
+                        {{--                                            </div>--}}
+                        {{--                                        </div>--}}
+                        {{--                                    </div>--}}
+                        {{--                                </div>--}}
+                        {{--                            @endforeach--}}
+                        {{--                            <a class="btn btn-bg mb-4 mx-auto" href="#"><b>View MORE</b></a>--}}
+                        {{--                        </div><!-- row -->--}}
+
+                        <!-- ======= Clients Section ======= -->
+                        <section id="organization " class="clients" data-aos="zoom-out">
+                            <div class="container" data-aos="zoom-in">
+                                <div class="section-title" data-aos="zoom-out">
+                                    <h3>Associate Organizations</h3>
+                                </div>
+                                <div class="row bg-beige">
+
+                                    @foreach($organizations as $organization)
+                                        <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                                            <img src="{{ asset('assets/uploads/organization/'.$organization->image)}}" class="img-fluid" alt="">
+                                        </div>
+                                    @endforeach
+
+
+                                </div>
 
                             </div>
-                            @foreach ($trainings as $i => $training)
-                                <div class="col-lg-4 col-md-4 ">
-                                    <button type="button" class="category-btn" data-toggle="modal" data-target="#trainingModal-{{$i}}">
-                                        <div class="single-post  border border-1">
-                                            <div class="image-wrapper" data-aos="fade-up"><img src="{{ asset('assets/uploads/training/'.$training->image)}}" alt="Blog Image"></div>
+                        </section><!-- End Clients Section -->
 
-                                            <div class="icons">
-                                                <div class="left-area">
-                                                    <a class=" category-btn" href="#"><b> {!!$training->title!!}</b></a>
-                                                </div>
-                                            </div>
+                        {{--                        <a class="btn load-more-btn" target="_blank" href="#">LOAD OLDER POSTS</a>--}}
 
-                                            <p> {!! Str::limit(strip_tags($training->description), 100) !!} ...</p>
+                        <div class="row" data-aos="fade-in">
 
-                                        </div><!-- single-post -->
-                                        <!-- Modal -->
-                                        <div class="modal fade" id="trainingModal-{{$i}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog modal-lg" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-body">
-                                                        <!-- Add your image here -->
-                                                        <p>   {!! $training->description !!}... </p>
+                            <div class="col-md-12">
+                                <div class="blog-posts">
+                                    <div class="row">
+                                        <div class="text-success font-weight-bold col-md-12 text-center">
+                                            <h3>Our CEO</h3>
+                                        </div>
+                                        <div class="col-md-3 mx-auto">
+                                            <div class="single-post">
+                                                <button type="button" class="category-btn" data-toggle="modal" data-target="#ceoModal">
+                                                    <div class="image-wrapper"  data-aos-id="super-duper"><img src="{{asset('assets/uploads/ceo/'. $ceo->image)}}" alt="Blog Image"></div>
+
+                                                    <div class="icons">
+                                                        <div class="left-area">
+                                                            <a class=" category-btn" href="#"><b>{{$ceo->name}}</b></a>
+                                                        </div>
+                                                    </div>
+                                                    <div style="font-style: italic !important;">
+                                                        <p >{!! $ceo->designation !!}</p>
+                                                    </div>
+                                                </button>
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="ceoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog modal-lg" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-body">
+                                                                <!-- Add your image here -->
+                                                                <img src="{{asset('assets/uploads/ceo/'. $ceo->image)}}" alt="Blog Image">
+                                                                <p>   {!! $ceo->message !!} </p>                                                    </div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </button>
-
-                                </div><!-- col-sm-6 -->
-
-                            @endforeach
-                        </div><!-- row -->
-
-                        <div class="row" >
-                            <div class="section-title col-md-12">
-                                <h2>Our CEO</h2>
-
-                            </div>
-                                <div class="col-lg-4 col-md-4 mx-auto">
-                                    <button type="button" class="category-btn" data-toggle="modal" data-target="#ceoModal">
-                                        <div class="single-post  border border-1">
-                                            <div class="image-wrapper" data-aos="fade-up"><img src="{{ asset('assets/uploads/training/'.$training->image)}}" alt="Blog Image"></div>
-
-                                            <div class="icons">
-                                                <div class="left-area">
-                                                    <a class=" category-btn" href="#"><b> {{$ceo->name}}</b></a>
-                                                </div>
-                                            </div>
-
-                                            <h5 class="title"><b class="light-color">{{$ceo->designation}}</b></h5>
-                                            <p> {!! Str::limit(strip_tags($ceo->message), 100) !!} ...</p>
-
+                                            </div><!-- single-post -->
+                                            {{--                                        <a class=" read-more-btn" href="#"><b> MORE</b></a>--}}
                                         </div><!-- single-post -->
-                                        <!-- Modal -->
-                                        <div class="modal fade" id="ceoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog modal-lg" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-body">
-                                                        <!-- Add your image here -->
-                                                        <p>   {!! $ceo->message !!}... </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </button>
-
-                                </div><!-- col-sm-6 -->
-
-                        </div><!-- row -->
-
-
-                    </div><!-- col-lg-4 -->
-
-                    <!-- ======= Clients Section ======= -->
-                    <section id="organization " class="clients" data-aos="zoom-out">
-                        <div class="container" data-aos="zoom-in">
-                            <div class="section-title" data-aos="zoom-out">
-                                <h3>Associate Organizations</h3>
-                            </div>
-                            <div class="row bg-beige">
-
-                                @foreach($organizations as $organization)
-                                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                                        <img src="{{ asset('assets/uploads/organization/'.$organization->image)}}" class="img-fluid" alt="">
+                                    </div><!-- col-sm-6 -->
+                                </div><!-- row -->
+                                <div class="row pt-4">
+                                    <div class="section-title col-md-12">
+                                        <h2>Trainings</h2>
                                     </div>
-                                @endforeach
+                                    @foreach ($trainings as $i => $training)
+                                        <div class="col-lg-4 col-md-4" >
+
+                                            <div class="single-post">
+                                                <button type="button" class="category-btn" data-toggle="modal" data-target="#trainingModal-{{$i}}">
+                                                    <div class="image-wrapper"><img src="{{ asset('assets/uploads/training/'.$training->image)}}" alt="Blog Image"></div>
+
+                                                    <div class="icons">
+                                                        <div class="left-area">
+                                                            <a class=" category-btn" href="#"><b> {!!$training->title!!}</b></a>
+                                                        </div>
+
+                                                    </div>
+
+                                                    {{--                                    <h3 class="title"><a href="#"><b class="light-color">How to paint the wall and street</b></a></h3>--}}
+                                                    <p> {!! Str::limit(strip_tags($training->description), 100) !!} ...</p>
+                                                    <!-- Modal -->
+                                                    <div class="modal fade" id="trainingModal-{{$i}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                        <div class="modal-dialog modal-lg" role="document">
+                                                            <div class="modal-content">
+                                                                <div class="modal-body">
+                                                                    <!-- Add your image here -->
+                                                                    <p>   {!! $training->description !!}... </p>                                                    </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                                </button>
+                                            </div><!-- single-post -->
+
+                                        </div><!-- col-sm-6 -->
+                                    @endforeach
 
 
-                            </div>
+                                </div><!-- row -->
 
+
+                            </div><!-- blog-posts -->
                         </div>
-                    </section><!-- End Clients Section -->
+                    </div><!-- col-lg-4 -->
                 </div><!-- row -->
             </div><!-- container -->
         </div>
